@@ -93,6 +93,46 @@ input:focus,select:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 
 .s1 .sv{color:#8df59a}.s2 .sv{color:#ff9d7d}.s3 .sv{color:#ffd45e}
 @media(prefers-reduced-motion:reduce){.card{animation:none}*{transition:none!important}}
 </style>
+<style id="th3">
+/* ===== v7 professional theme ===== */
+:root{--bg:#f5f2ec;--card:#fff;--tx:#1d1916;--mu:#756b5f;--ac:#c2410c;--gold:#a16207;--bd:#e6e0d4;--glow:transparent;--glow2:transparent}
+:root[data-theme=dark]{--bg:#0e0c0a;--card:#181512;--tx:#f1ebe0;--mu:#a89c88;--ac:#ea580c;--gold:#d4a24a;--bd:#2c2620;--glow:transparent;--glow2:transparent}
+body{background:var(--bg);font-weight:500}
+h2{font-family:Nunito,system-ui,sans-serif;font-weight:800;letter-spacing:-.2px}
+.card h3{font-family:Nunito,system-ui,sans-serif;font-weight:800;font-size:15px}
+main>h2::after{background:var(--ac);width:34px;height:3px}
+.hero{background:linear-gradient(135deg,#17110d,#2b1a10);box-shadow:0 8px 24px -12px rgba(0,0,0,.5);padding-bottom:26px}
+.hero::after{height:4px;background:linear-gradient(90deg,#c2410c,#d4a24a,#c2410c)}
+.hero h1{color:#f3dfae;text-shadow:none;font-size:26px}
+button{background:var(--ac);box-shadow:none;border-radius:10px;font-weight:700}
+button:active{transform:scale(.97);box-shadow:none}
+button.g{background:var(--card);border:1px solid var(--bd);color:var(--tx)}
+.hero button.g{background:transparent}
+.card{border-radius:14px;border:1px solid var(--bd);box-shadow:0 1px 2px rgba(0,0,0,.06),0 8px 18px -12px rgba(0,0,0,.3)}
+.it,.pn{border-radius:14px;box-shadow:0 1px 2px rgba(0,0,0,.05)}
+.it.off{opacity:.5}
+.img{background:linear-gradient(160deg,#2b1a10,#4a2a16)}
+.hot{background:var(--ac);box-shadow:none}
+.tag{background:var(--bd);color:var(--tx)}
+.deal{background:var(--card);color:var(--tx);border:1px solid var(--bd);border-left:4px solid var(--ac);border-radius:12px;box-shadow:none}
+.dl{line-height:1.6}
+input,select,textarea{border:1px solid var(--bd);border-radius:10px}
+input:focus,select:focus,textarea:focus{border-color:var(--ac);box-shadow:0 0 0 3px rgba(194,65,12,.15)}
+#bar{background:#1d1916;border:0;border-radius:14px;color:#fff}
+.sz button b{color:var(--ac)}
+td{border-bottom:1px solid var(--bd)}
+
+/* top dock: folder tabs sab se upar, uske neeche Sale/Kharcha/Udhar */
+#topdock{position:sticky;top:0;z-index:30;background:var(--bg);border-bottom:1px solid var(--bd);padding-top:env(safe-area-inset-top,0px);box-shadow:0 6px 16px -12px rgba(0,0,0,.4)}
+#tabbar{position:relative;display:flex;gap:3px;overflow-x:auto;padding:8px 10px 0;max-width:760px;margin:auto;scrollbar-width:none}
+#tabbar::-webkit-scrollbar{display:none}
+#tabbar button{flex:0 0 auto;display:flex;align-items:center;gap:6px;white-space:nowrap;background:transparent;color:var(--mu);border:1px solid transparent;border-bottom:3px solid transparent;border-radius:10px 10px 0 0;padding:8px 12px;font-size:14px;font-weight:700;box-shadow:none}
+#tabbar button.on{color:var(--tx);background:var(--card);border-color:var(--bd);border-bottom-color:var(--ac)}
+#sumbar{position:static;padding:8px 10px;background:none;max-width:760px;margin:auto}
+.lcd{border:1px solid #3a3027;border-radius:12px}
+.sc{padding:7px 10px 6px}
+nav{top:calc(env(safe-area-inset-top,0px) + var(--sbh,0px))}
+</style>
 </head><body>
 <div class="hero"><div class="t"><svg onclick="lg()" viewBox="0 0 400 400"><circle cx="200" cy="200" r="190" fill="#fff"/><g fill="#d9480f"><circle cx="150" cy="150" r="42"/><circle cx="200" cy="125" r="48"/><circle cx="250" cy="150" r="42"/><rect x="150" y="150" width="100" height="70"/><rect x="146" y="226" width="108" height="26" rx="6"/></g><text x="200" y="320" text-anchor="middle" font-family="'Playfair Display',Georgia,serif" font-weight="bold" font-size="52" fill="#9c6a1f">CHEF DAD</text></svg><div style="flex:1"><h1>CHEF DAD</h1><small>Pizza • Burger • Broast • Shah Sadar Din, D.G. Khan</small></div><button class="g" onclick="tm()">🌓</button><button class="g" id="ownb" style="display:none" onclick="V('admin')">⚙️ Owner</button><button class="g" id="ctrb" style="display:none" onclick="view='cart';R()">🛒 Counter order</button></div><div class="ct"><a href="tel:03155921480"><button class="g">📞 Call karein</button></a><a href="https://wa.me/923155921480"><button class="g">💬 WhatsApp</button></a></div></div>
 <main id="app"></main>
@@ -147,7 +187,7 @@ function adminV(){if(!adm)return `<h2>Owner Login</h2><input id="pi" type="passw
 const today=bd(Date.now());const to=orders.filter(o=>bd(o.id)==today&&o.st!="Cancel");
 const todaySale=to.reduce((a,o)=>a+o.tot,0),todayCash=to.filter(o=>o.paid).reduce((a,o)=>a+o.tot,0),udharAll=udTotal(),expToday=exp.filter(x=>x.t==today).reduce((a,x)=>a+x.a,0),expAll=exp.reduce((a,x)=>a+x.a,0);
 let h=`<!--T:aaj0--><h2>Dashboard</h2><div class="pn"><b>Aaj ki sale: ${rs(todaySale)}</b> <span class=tag>1 PM – 1 AM</span><div class="st">${to.length} orders • Aaj kul print nikle: ${prToday()} • Aakhri bill no: ${to.reduce((m,o)=>Math.max(m,o.bn||0),0)} • Kul orders: ${orders.length}</div><div class="row"><button onclick="view='cart';R()">＋ Counter order lein</button><button class="g" onclick="V('menu')">Menu</button><button class="g" onclick="view='history';R()">📅 Pichla Record</button><button class="g" onclick="adm=false;sv('cd_adm',false);V('menu')">Logout</button></div></div>${regH(today)}<!--T:zakat--><div class="pn"><b>🕌 Zakat (2.5% har sale par): ${rs(zk)}</b><div class="row"><button class="g" onclick="if(confirm('Zakat nikal di? Total reset ho jaye ga.')){zk=0;sv('cd_zk',0);R()}">Zakat nikal di ✅</button></div></div><!--T:kharcha-->${expH()}<!--T:udhar-->${udH()}<!--T:orders--><h2>Orders</h2>`;
-h+=orders.slice(0,30).map(o=>`<div class="pn"><b>Bill #${o.bn||String(o.id).slice(-5)} • ${o.ty} • ${rs(o.tot)}</b> <span class=tag>${o.st}</span> <span class=tag>${o.pm||""}</span> ${o.ch=="wa"?'<span class=tag>📱 WhatsApp</span>':o.ch=="online"?'<span class=tag>💻 Online</span>':''}<div class="st">${o.t} • ${o.nm} ${o.ph}</div><div>${o.items.map(c=>c.q+"× "+c.n+(c.s=="-"?"":" ("+c.s+")")).join(", ")}</div>${o.ad?'<div class="st">📍 '+o.ad+'</div>':''}<div class="row"><button onclick="pr(${o.id})">🖨️ Print</button><button class="g" onclick="kot(${o.id})">🍳 KOT</button><button class="g" onclick="pd(${o.id})">${o.paid?"Paid ✅":"Unpaid ❌"}</button>${["Tayyar","Delivered","Cancel"].map(s=>`<button class="g" onclick="setSt(${o.id},'${s}')">${s}</button>`).join("")}${o.ph?`<a href="https://wa.me/${o.ph.replace(/^0/,'92').replace(/\D/g,'')}"><button class="g">WhatsApp</button></a>`:''}<button class="g" onclick="delOrder(${o.id})">🗑️ Delete</button></div></div>`).join("")||'<div class="st">Abhi koi order nahi</div>';
+h+=ordFilterH()+orders.filter(ordPass).slice(0,30).map(o=>`<div class="pn"><b>Bill #${o.bn||String(o.id).slice(-5)} • ${o.ty} • ${rs(o.tot)}</b> <span class=tag>${o.st}</span> <span class=tag>${o.pm||""}</span> ${o.ch=="wa"?'<span class=tag>📱 WhatsApp</span>':o.ch=="online"?'<span class=tag>💻 Online</span>':''}<div class="st">${o.t} • ${o.nm} ${o.ph}</div><div>${o.items.map(c=>c.q+"× "+c.n+(c.s=="-"?"":" ("+c.s+")")).join(", ")}</div>${o.ad?'<div class="st">📍 '+o.ad+'</div>':''}<div class="row"><button onclick="pr(${o.id})">🖨️ Print</button><button class="g" onclick="kot(${o.id})">🍳 KOT</button><button class="g" onclick="pd(${o.id})">${o.paid?"Paid ✅":"Unpaid ❌"}</button>${["Tayyar","Delivered","Cancel"].map(s=>`<button class="g" onclick="setSt(${o.id},'${s}')">${s}</button>`).join("")}${o.ph?`<a href="https://wa.me/${o.ph.replace(/^0/,'92').replace(/\D/g,'')}"><button class="g">WhatsApp</button></a>`:''}<button class="g" onclick="delOrder(${o.id})">🗑️ Delete</button></div></div>`).join("")||'<div class="st">Abhi koi order nahi</div>';
 h+=`<!--T:menu--><h2>Menu & Rates</h2><div class="st">Rate badal kar bahar click karein; "Khatam" se item chhup jaye ga.</div>`+D.map(([c,n,pr])=>`<div class="pn"><b>${n}</b> <span class=tag>${c}</span> ${ph[n]?"✅":""} <label class="st" style="text-decoration:underline">📷 photo<input type="file" accept="image/*" style="display:none" onchange="up(\`${n}\`,this)"></label> <label class="st"><input type="checkbox" style="width:auto" ${off(n)?'checked':''} onchange="tg(\`${n}\`,this.checked)"> Khatam</label><div class="row">${Object.entries(pr).map(([s,p])=>`${s=="-"?"":s} <input class="p" type="number" value="${price(n,s,p)}" onchange="sp(\`${n}\`,'${s}',this.value)">`).join("")}</div></div>`).join("")+
 `<!--T:data1--><div class="pn"><b>PIN badlein</b><input id="np" placeholder="Naya PIN"><button onclick="pin=document.getElementById('np').value||pin;sv('cd_pin',pin);alert('PIN save')">Save</button></div>`;return h}
 function setSt(id,s){const o=orders.find(x=>x.id==id);o.st=s;sv("cd_orders",orders);if(okApi()&&st.key)api("action=status&id="+id+"&st="+encodeURIComponent(s)).catch(()=>{});R()}
@@ -246,12 +286,18 @@ function fv(n){FV=FV.includes(n)?FV.filter(x=>x!=n):[...FV,n];sv("cd_fav",FV);do
 function getLoc(){navigator.geolocation.getCurrentPosition(p=>{f.loc="https://maps.google.com/?q="+p.coords.latitude+","+p.coords.longitude;R()},()=>alert("Location allow karein ya address likh dein"))}
 function again(){const it=ld("cd_last",[]);cart={};it.forEach(c=>cart[key(c.n,c.s)]={n:c.n,s:c.s,p:price(c.n,c.s,c.p),q:c.q});V("cart")}
 function card(n,pr,c){const o=off(n),p=ph[n];return `<div class="card ${o?"off":""}"><div class="img" style="${p?`background-image:url(${p})`:""}">${p?"":art(c)}${HOT.includes(n)?'<span class="hot">🔥 Popular</span>':""}<button class="fv" onclick="fv(\`${n}\`)">${FV.includes(n)?"❤️":"🤍"}</button></div><div class="b"><h3>${n}${o?' <span class="tag">khatam</span>':""}</h3><div class="sz">${o?"":Object.entries(pr).map(([s,pp])=>{const x=price(n,s,pp);return `<button onclick="add(\`${n}\`,'${s}',${x})"><small>${s=="-"?"Add":s}</small> <b>Rs ${x}</b> ＋</button>`}).join("")}</div></div></div>`}
-function dcard(d){return `<div class="card"><div class="img"><svg viewBox="0 0 100 100" width="92" height="92"><text x="50" y="68" font-size="64" text-anchor="middle">🎁</text></svg><span class="hot">DEAL</span></div><div class="b"><h3>${esc(d.n)}</h3><div class="st" style="margin-bottom:8px">${esc(d.d)}</div><div class="sz"><button onclick="add(\`${esc(d.n)}\`,'-',${d.p})"><small>Add</small> <b>Rs ${d.p}</b> ＋</button></div></div></div>`}
-function list(){HOT=hot();const t=q.trim().toLowerCase();let a;if(!t&&cat=="Deals")return '<div class="grid">'+deals.map(dcard).join("")+"</div>";a=D.filter(d=>t?d[1].toLowerCase().includes(t):cat=="Fav"?FV.includes(d[1]):d[0]==cat);return '<div class="grid">'+(a.map(d=>card(d[1],d[2],d[0])).join("")||'<div class="st">Kuch nahi mila. Dil ❤️ dabakar pasandeeda items chunein.</div>')+"</div>"}
-function menu(){const cs=[...(deals.length?["Deals"]:[]),...(FV.length?["Fav"]:[]),...CATS];return `${st.open?"":'<div class="pn" style="background:#fee;border-color:#f99;color:#900">🔴 Dukan abhi band hai, orders band hain.</div>'}${TB?`<div class="deal">🪑 Table ${esc(TB)} \u2022 aap ka order seedha is table par aaye ga</div>`:""}${st.deal?`<div class="deal">🎉 ${esc(st.deal)}</div>`:""}<div class="row" style="margin:8px 0"><span class="tag">⏱️ ${esc(st.eta)}</span>${ld("cd_last",[]).length?'<button class="g" onclick="again()">🔁 Pichla order dobara</button>':""}</div><nav>${cs.map(c=>`<button class="${c==cat&&!q?"":"g"}" onclick="cat='${c}';q='';R()">${EM[c]} ${c=="Fav"?"Favourite":c}</button>`).join("")}</nav><input placeholder="🔍 Item dhoondein..." value="${esc(q)}" oninput="q=this.value;document.getElementById('list').innerHTML=list()"><h2>${q?"Search":EM[cat]+" "+(cat=="Fav"?"Favourite":cat)}</h2><div id="list">${list()}</div>`}
+function dcard(d){return `<div class="card"><div class="img"><svg viewBox="0 0 100 100" width="92" height="92"><text x="50" y="68" font-size="64" text-anchor="middle">🎁</text></svg><span class="hot">DEAL</span></div><div class="b"><h3>${esc(d.n)}</h3><div class="st dl" style="margin-bottom:8px">${esc(d.d).split("+").map(x=>x.trim()).filter(Boolean).map(x=>"• "+x).join("<br>")}</div><div class="sz"><button onclick="add(\`${esc(d.n)}\`,'-',${d.p})"><small>Add</small> <b>Rs ${d.p}</b> ＋</button></div></div></div>`}
+function list(){HOT=hot();const t=q.trim().toLowerCase();let a;if(!t&&cat=="Deals")return '<div class="grid">'+deals.filter(d=>!d.off).map(dcard).join("")+"</div>";a=D.filter(d=>t?d[1].toLowerCase().includes(t):cat=="Fav"?FV.includes(d[1]):d[0]==cat);return '<div class="grid">'+(a.map(d=>card(d[1],d[2],d[0])).join("")||'<div class="st">Kuch nahi mila. Dil ❤️ dabakar pasandeeda items chunein.</div>')+"</div>"}
+function menu(){if(cat=="Deals"&&!deals.some(d=>!d.off))cat="Pizza";const cs=[...(deals.some(d=>!d.off)?["Deals"]:[]),...(FV.length?["Fav"]:[]),...CATS];return `${st.open?"":'<div class="pn" style="background:#fee;border-color:#f99;color:#900">🔴 Dukan abhi band hai, orders band hain.</div>'}${TB?`<div class="deal">🪑 Table ${esc(TB)} \u2022 aap ka order seedha is table par aaye ga</div>`:""}${st.deal?`<div class="deal">🎉 ${esc(st.deal)}</div>`:""}<div class="row" style="margin:8px 0"><span class="tag">⏱️ ${esc(st.eta)}</span>${ld("cd_last",[]).length?'<button class="g" onclick="again()">🔁 Pichla order dobara</button>':""}</div><nav>${cs.map(c=>`<button class="${c==cat&&!q?"":"g"}" onclick="cat='${c}';q='';R()">${EM[c]} ${c=="Fav"?"Favourite":c}</button>`).join("")}</nav><input placeholder="🔍 Item dhoondein..." value="${esc(q)}" oninput="q=this.value;document.getElementById('list').innerHTML=list()"><h2>${q?"Search":EM[cat]+" "+(cat=="Fav"?"Favourite":cat)}</h2><div id="list">${list()}</div>`}
 function addDeal(){const g=i=>document.getElementById(i).value.trim();if(!g("dn")||!+g("dp")){alert("Naam aur rate likhein");return}deals.push({n:g("dn"),p:+g("dp"),d:g("dd")});sv("cd_deals",deals);R()}
-function delDeal(i){deals.splice(i,1);sv("cd_deals",deals);R()}
-function adminZ(){if(!adm)return adminX();return `<div class="pn"><b>🎁 Deals / Combos</b><div class="st">Jo deal banayenge woh menu mein "Deals" tab mein aaye gi.</div><input id="dn" placeholder="Deal ka naam (e.g. Family Deal)"><input id="dp" type="number" placeholder="Rate (Rs)"><input id="dd" placeholder="Is mein kya kya hai (e.g. 2 Medium Pizza + 1.5L Drink)"><button onclick="addDeal()">＋ Deal shamil karein</button>${deals.map((d,i)=>`<div class="row" style="justify-content:space-between"><span>${esc(d.n)} \u2022 Rs ${d.p}</span><button class="g" onclick="delDeal(${i})">Hatayein</button></div>`).join("")}</div>`+adminX()}
+function delDeal(i){if(!confirm("Ye deal hata dein?"))return;deals.splice(i,1);sv("cd_deals",deals);R()}
+let dEdit=-1;
+function dealsH(){return `<div class="pn"><b>🎁 Naya Deal banayein</b><div class="st">Jo deal banayenge woh menu ke "Deals" tab mein customer ko nazar aaye gi.</div><input id="dn" placeholder="Deal ka naam (e.g. Family Deal)"><input id="dp" type="number" inputmode="numeric" placeholder="Rate (Rs)"><input id="dd" placeholder="Is mein kya kya hai (e.g. 2 Medium Pizza + 1.5L Drink)"><button onclick="addDeal()">＋ Deal shamil karein</button></div><h2>Deals (${deals.length})</h2>`+(deals.map((d,i)=>dEdit===i?`<div class="pn"><b>✏️ Deal edit</b><input id="dn2" value="${esc(d.n)}"><input id="dp2" type="number" inputmode="numeric" value="${d.p}"><input id="dd2" value="${esc(d.d)}"><div class="row"><button onclick="saveDeal(${i})">Save</button><button class="g" onclick="dEdit=-1;R()">Cancel</button></div></div>`:`<div class="it ${d.off?"off":""}"><b>${esc(d.n)} <span style="float:right">${rs(d.p)}</span></b>${d.off?'<span class="tag">band (customer ko nahi dikhti)</span>':""}<div class="st">${esc(d.d)}</div><div class="row"><button class="g" onclick="dEdit=${i};R()">✏️ Edit</button><button class="g" onclick="togDeal(${i})">${d.off?"Chalu karein":"Khatam"}</button><button class="g" onclick="mvDeal(${i},-1)">↑</button><button class="g" onclick="mvDeal(${i},1)">↓</button><button class="g" onclick="dupDeal(${i})">Copy</button><button class="g" onclick="delDeal(${i})">🗑️</button></div></div>`).join("")||'<div class="st">Abhi koi deal nahi</div>')}
+function saveDeal(i){const g=x=>document.getElementById(x).value.trim();if(!g("dn2")||!+g("dp2")){alert("Naam aur rate likhein");return}deals[i]=Object.assign({},deals[i],{n:g("dn2"),p:+g("dp2"),d:g("dd2")});sv("cd_deals",deals);dEdit=-1;R()}
+function togDeal(i){deals[i].off=!deals[i].off;sv("cd_deals",deals);R()}
+function mvDeal(i,d){const j=i+d;if(j<0||j>=deals.length)return;[deals[i],deals[j]]=[deals[j],deals[i]];sv("cd_deals",deals);R()}
+function dupDeal(i){deals.splice(i+1,0,Object.assign({},deals[i],{n:deals[i].n+" (copy)"}));sv("cd_deals",deals);R()}
+function adminZ(){return adminX()}
 let OWN=ld("cd_own",false),taps=0;
 function lg(){}
 if(location.hash=="#owner")view="admin";
@@ -320,9 +366,8 @@ return `<div class="pn"><b>📒 Roznamcha — ${d}</b> <span class="tag">${r.n} 
 <h2 style="margin:8px 0 2px">Closing: ${rs(r.close)}</h2><div class="st">Closing = Opening ${rs(r.open)} + Cash sale ${rs(r.cash)} + Wasooli ${rs(r.was)} − Kharcha ${rs(r.exT)}</div>
 <div class="st">Net kamai (sale − kharcha): <b>${rs(r.sale-r.exT)}</b></div>${showAll?"":'<div class="row"><button class="g" onclick="view=\'history\';R()">📅 Pichle dinon ka roznamcha</button></div>'}</div>`}
 function histV(){const days=allDays().reverse();return `<h2>📅 Pichla Roznamcha</h2><div class="row"><button class="g" onclick="view='admin';R()">← Dashboard</button></div>${days.map(d=>regH(d,1)).join("")||'<div class="st">Abhi koi record nahi</div>'}`}
-function toggleCalc(){let m=document.getElementById("cm");if(m){m.remove();return}m=document.createElement("div");m.id="cm";m.style.cssText="position:fixed;left:8px;right:8px;bottom:8px;max-width:420px;margin:auto;z-index:20;background:var(--bg);border:2px solid var(--gold);border-radius:14px;padding:6px;box-shadow:0 10px 30px rgba(0,0,0,.5);max-height:90vh;overflow:auto";m.innerHTML=calcH()+'<button class="g" style="width:100%" onclick="toggleCalc()">Band karein ✖</button>';document.body.appendChild(m)}
-(function(){const b=document.createElement("button");b.id="cfab";b.textContent="🧮";b.onclick=toggleCalc;b.style.cssText="position:fixed;right:12px;bottom:130px;width:54px;height:54px;border-radius:50%;font-size:26px;padding:0;z-index:15;display:none;box-shadow:0 4px 14px rgba(0,0,0,.4)";document.body.appendChild(b)})();
-{const _R=R;R=function(){_R();const f=document.getElementById("cfab");if(f)f.style.display=(OWN||adm)&&view!="cart"?"block":"none";const m=document.getElementById("cm");if(m&&view=="cart")m.remove()}}
+
+
 
 /* ===== v4: owner tabs (har cheez alag folder) ===== */
 let otab="aaj";try{otab=localStorage.getItem("cd_otab")||"aaj"}catch(e){}
@@ -350,25 +395,182 @@ ${[["Pichle 24 ghante",1],["Pichle 7 din",7],["Pichle 30 din",30]].map(([l,d])=>
 {const _aX=adminX;adminX=function(){const html=_aX();if(!adm)return html;
 const parts=html.split(/<!--T:(\w+)-->/),seg={};for(let i=1;i<parts.length;i+=2){const k=parts[i];(seg[k]=seg[k]||[]).push(parts[i+1])}
 const by={};Object.keys(seg).sort().forEach(k=>{const t=k.replace(/\d+$/,"");by[t]=(by[t]||"")+seg[k].join("")});
-by.delivery=deliveryH();
+by.delivery=deliveryH();by.deals=dealsH();
 const today=bd(Date.now()),n=orders.filter(o=>bd(o.id)==today&&o.st!="Cancel").length,dn=dvOf(today).length;
-const T=[["aaj","🏠 Aaj"],["delivery","🚚 Delivery"+(dn?" ("+dn+")":"")],["orders","🧾 Orders"+(n?" ("+n+")":"")],["kharcha","💸 Kharcha"],["udhar","📒 Udhar"],["zakat","🕌 Zakat"],["report","📈 Report"],["menu","🍽️ Menu & Rates"],["setting","⚙️ Settings"],["data","💾 Data & PIN"]];
-if(!by[otab])otab="aaj";
-return `<div id="otabs" style="position:sticky;top:0;z-index:12;display:flex;gap:6px;overflow-x:auto;padding:8px 0;background:var(--bg);margin:0 0 4px">${T.map(([k,l])=>`<button class="${k==otab?"":"g"}" style="flex:0 0 auto;white-space:nowrap" onclick="setTab('${k}')">${l}</button>`).join("")}</div>${by[otab]||""}`}}
+if(!by[otab])otab="aaj";return by[otab]||""}}
 
 
 /* ===== v6: upar ka panel — Sale / Kharcha / Total udhar (har page par, sirf owner login par) ===== */
 function go(t){view="admin";setTab(t)}
-(function(){const s=document.createElement("div");s.id="sumbar";s.style.display="none";document.body.insertBefore(s,document.getElementById("app"))})();
-function sumUpdate(){const s=document.getElementById("sumbar");if(!s)return;
-if(!adm){s.style.display="none";document.documentElement.style.setProperty("--sbh","0px");return}
+(function(){const d=document.createElement("div");d.id="topdock";d.style.display="none";d.innerHTML='<div id="tabbar"></div><div id="sumbar"></div>';document.body.insertBefore(d,document.body.firstChild)})();
+function sumUpdate(){const d=document.getElementById("topdock"),s=document.getElementById("sumbar"),tb=document.getElementById("tabbar");if(!d)return;
+if(!adm){d.style.display="none";document.documentElement.style.setProperty("--sbh","0px");return}
+d.style.display="block";
 const t=bd(Date.now()),os=orders.filter(o=>bd(o.id)==t&&o.st!="Cancel"),sale=os.reduce((q,o)=>q+o.tot,0),ex=exp.filter(x=>x.t==t).reduce((q,x)=>q+x.a,0),u=udTotal(),
 n=v=>Math.round(v).toLocaleString("en-PK"),
 c=(k,cl,lb,v,sub)=>`<div class="sc ${cl}" role="button" tabindex="0" onclick="go('${k}')" onkeydown="if(event.key=='Enter')go('${k}')"><span class="sl">${lb}</span><span class="sv"><i>Rs</i>${n(v)}</span><span class="ss">${sub}</span></div>`;
+const sl=tb.scrollLeft;
+tb.innerHTML=OT().map(([k,e,l])=>`<button class="${view=="admin"&&k==otab?"on":""}" onclick="go('${k}')"><span>${e}</span>${l}</button>`).join("");
+const a=tb.querySelector(".on");tb.scrollLeft=sl;if(a&&(a.offsetLeft<sl||a.offsetLeft+a.offsetWidth>sl+tb.clientWidth))tb.scrollLeft=a.offsetLeft-(tb.clientWidth-a.offsetWidth)/2;
 s.innerHTML=`<div class="lcd">${c("aaj","s1","Sale",sale,os.length+" orders aaj")}${c("kharcha","s2","Kharcha",ex,"aaj ka")}${c("udhar","s3","Total udhar",u,"kul baqaya")}</div>`;
-s.style.display="block";document.documentElement.style.setProperty("--sbh",s.offsetHeight+"px")}
+document.documentElement.style.setProperty("--sbh",d.offsetHeight+"px")}
 {const _R6=R;R=function(){_R6();sumUpdate()}}
 addEventListener("resize",sumUpdate);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(sumUpdate);
 
+/* ===== v7: owner tab list, orders filter ===== */
+function OT(){const today=bd(Date.now()),n=orders.filter(o=>bd(o.id)==today&&o.st!="Cancel").length,dn=dvOf(today).length,dl=deals.length;
+return [["aaj","🏠","Aaj"],["delivery","🚚","Delivery"+(dn?" ("+dn+")":"")],["orders","🧾","Orders"+(n?" ("+n+")":"")],["deals","🎁","Deals"+(dl?" ("+dl+")":"")],["kharcha","💸","Kharcha"],["udhar","📒","Udhar"],["zakat","🕌","Zakat"],["report","📈","Report"],["menu","🍽️","Menu & Rates"],["setting","⚙️","Settings"],["data","💾","Data & PIN"]]}
+let ofl="Sab";
+const ordPass=o=>ofl=="Sab"||(ofl=="Unpaid"?(!o.paid&&o.st!="Cancel"):o.st==ofl);
+function ordFilterH(){return `<div class="row" style="margin:0 0 8px">${["Sab","Naya","Tayyar","Delivered","Unpaid","Cancel"].map(s=>`<button class="${s==ofl?"":"g"}" style="padding:6px 12px;font-size:13px" onclick="ofl='${s}';R()">${s}</button>`).join("")}</div>`}
 R();
-</script></body></html>
+</script><script id="sav-js">
+(function(){
+let sav=ld("cd_sav",[]);
+const sOf=d=>sav.filter(x=>x.t==d).reduce((q,x)=>q+x.a,0);
+const _ds=dayStat;
+dayStat=function(d,memo){const r=_ds(d,memo);if(r.sv===undefined){r.sv=sOf(d);r.close=r.close-r.sv}return r};
+window.addSav=function(d,pp,a,n){const g=i=>(document.getElementById(i)||{}).value;a=a||+g("sva");if(!a||a<=0){alert("Saving ki raqam likhein");return}sav.unshift({id:Date.now(),t:d,a,n:n!==undefined?n:(g("svn")||"").trim()});sv("cd_sav",sav);R();if(pp)window.prReg(d)};
+window.delSav=function(id){if(!confirm("Ye saving entry hata dein?"))return;sav=sav.filter(x=>x.id!=id);sv("cd_sav",sav);R()};
+window.prReg=function(d){const r=dayStat(d),L=(a,b,bo)=>`<tr><td>${a}</td><td style="text-align:right">${bo?"<b>"+b+"</b>":b}</td></tr>`,cats=[...new Set(r.ex.map(x=>x.d))],rc=document.getElementById("rc");
+rc.style.width=(st.pw||72)+"mm";
+rc.innerHTML=`<div style="text-align:center"><b style="font-size:18px">CHEF DAD</b><br>Roznamcha • ${d}</div><hr><table>${L("Opening (galla)",rs(r.open))}${L("Kul sale ("+r.n+" orders)",rs(r.sale),1)}${L("&nbsp;&nbsp;Cash sale",rs(r.cash))}${L("&nbsp;&nbsp;JazzCash/EP/Card",rs(r.dig))}${L("&nbsp;&nbsp;Udhar par",rs(r.udg))}${L("Udhar wasooli",rs(r.was))}</table><hr><table>${cats.map(c=>L(esc(c),rs(r.ex.filter(x=>x.d==c).reduce((q,x)=>q+x.a,0)))).join("")}${L("Kul kharcha",rs(r.exT),1)}</table><hr><table>${L("Net kamai",rs(r.sale-r.exT),1)}${L("Saving",rs(r.sv),1)}</table><hr><div style="text-align:center">Galle mein baqi<br><b style="font-size:22px">${rs(r.close)}</b></div>`;
+window.print()};
+window.chefSav={add:(d,a,n)=>window.addSav(d,0,a,n),of:sOf};
+const _rg=regH;
+regH=function(d,all){let h=_rg(d,all);const r=dayStat(d),es=sav.filter(x=>x.t==d);
+const blk=`<div class="pn" style="margin:8px 0"><b>💰 Saving (bachat)</b> <span class="tag">${rs(r.sv)}</span>${all?"":`<div class="row"><input id="sva" type="number" inputmode="numeric" placeholder="Saving ki raqam" style="flex:1"><input id="svn" placeholder="Note (optional)" style="flex:1"></div><div class="row"><button onclick="addSav('${d}')">＋ Saving daalein</button><button class="g" onclick="addSav('${d}',1)">＋ Saving + 🖨️ Print</button></div>`}${es.map(x=>`<div class="st">${x.n?esc(x.n)+" • ":""}<b>${rs(x.a)}</b> <button class="g" onclick="delSav(${x.id})">🗑️</button></div>`).join("")}<div class="st">Saving galle se alag rakhi jati hai, kharcha ya net kamai mein nahi ginti.</div></div>`;
+h=h.replace('<h2 style="margin:8px 0 2px">Closing: ',blk+'<h2 style="margin:8px 0 2px">Galle mein baqi: ').replace(/Closing = (Opening[^<]*)/,"Baqi = $1 − Saving "+rs(r.sv));
+return h.replace(/<\/div>$/,`<div class="row"><button onclick="prReg('${d}')">🖨️ Roznamcha print</button></div></div>`)};
+R();
+})();
+</script>
+
+<style id="vs">
+#vfab{position:fixed;right:14px;bottom:calc(142px + env(safe-area-inset-bottom,0px));z-index:60;width:58px;height:58px;border-radius:50%;padding:0;font-size:26px;border:1.5px solid #caa54e;background:radial-gradient(120% 150% at 50% 0,#3a2c1c,#120d08);box-shadow:0 8px 22px rgba(0,0,0,.45),0 0 0 3px rgba(242,165,22,.18)}
+#vp{position:fixed;z-index:61;right:10px;left:10px;bottom:calc(10px + env(safe-area-inset-bottom,0px));max-width:400px;margin:0 0 0 auto;padding:12px;border-radius:24px;border:1.5px solid #caa54e;color:#f3e4c8;background:radial-gradient(120% 120% at 50% 0,rgba(52,40,26,.97),rgba(14,10,6,.98));backdrop-filter:blur(14px);box-shadow:0 18px 44px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.08);font-family:Nunito,system-ui,sans-serif}
+#vp[hidden]{display:none}
+#vp button{background:rgba(255,255,255,.09);color:#f3e4c8;box-shadow:none;border:1px solid rgba(202,165,78,.35);border-radius:14px;padding:8px 12px}
+#vp .vh{display:flex;justify-content:space-between;align-items:center;font-weight:800;font-size:13px;color:#e3cfa8;margin-bottom:8px}
+#vp .vh button{padding:4px 10px;margin-left:6px}
+.vlcd{background:#0b0805;border-radius:16px;padding:10px 12px;min-height:92px;box-shadow:inset 0 0 20px rgba(0,0,0,.8);border:1px solid rgba(202,165,78,.28)}
+#vtr{font:600 15px/1.4 ui-monospace,Menlo,Consolas,monospace;color:#8df59a;min-height:21px;word-break:break-word}
+#vrp{margin-top:8px;font-size:16px;line-height:1.7;color:#ffd45e;font-weight:700;unicode-bidi:plaintext}
+.vch{display:flex;gap:6px;overflow-x:auto;padding:8px 0;scrollbar-width:none}.vch::-webkit-scrollbar{display:none}
+#vp .vch button{white-space:nowrap;font-size:12px;padding:6px 10px;border-radius:999px}
+.vin{display:flex;gap:6px;align-items:center}.vin input{margin:0;background:#1b140c;color:#f3e4c8;border-color:rgba(202,165,78,.35);padding:9px 12px}
+.vm{display:flex;align-items:center;justify-content:space-between;margin-top:8px;font-size:12px;color:#e3cfa8}.vm label{display:flex;gap:6px;align-items:center}.vm input{width:auto;margin:0}
+#vp .orb{width:64px;height:64px;border-radius:50%;padding:0;font-size:28px;border:0;background:conic-gradient(from 0deg,#f2a516,#d8420f,#2f7d4f,#f2a516);box-shadow:0 0 0 4px rgba(242,165,22,.2)}
+#vp .orb.on{animation:vsp 1.1s ease-in-out infinite}
+@keyframes vsp{0%,100%{box-shadow:0 0 0 4px rgba(242,165,22,.25),0 0 18px rgba(242,165,22,.4)}50%{box-shadow:0 0 0 14px rgba(242,165,22,.08),0 0 34px rgba(216,66,15,.7)}}
+@media(prefers-reduced-motion:reduce){#vp .orb.on{animation:none}}
+@media print{#vfab,#vp{display:none!important}}
+</style>
+<button id="vfab" aria-label="Awaaz se hukm dein">🎙️</button>
+<div id="vp" hidden role="dialog" aria-label="Chef Dad awaaz sahayak">
+<div class="vh"><span>🎙️ Chef Dad • Awaaz sahayak</span><span><button id="vtts" aria-label="Jawab ki awaaz">🔊</button><button id="vx" aria-label="Band karein">✕</button></span></div>
+<div class="vlcd"><div id="vtr">Mic dabayein aur Urdu mein bolein…</div><div id="vrp" dir="auto"></div></div>
+<div class="vch" id="vch"></div>
+<div class="vin"><input id="vtx" placeholder="Ya yahan likhein (Urdu / Roman)"><button id="vgo" aria-label="Chalayein">↵</button></div>
+<div class="vm"><label><input type="checkbox" id="vco">لگاتار سنیں</label><button class="orb" id="vmic" aria-label="Bolna shuru karein">🎙️</button></div>
+</div>
+<script>
+(function(){
+const $=i=>document.getElementById(i);
+const UR={};("ایک=ek|دو=do|تین=teen|چار=char|پانچ=paanch|چھ=chhe|سات=saat|آٹھ=aath|نو=nau|دس=das|گیارہ=gyarah|بارہ=barah|تیرہ=terah|چودہ=chaudah|پندرہ=pandrah|سولہ=solah|سترہ=satrah|اٹھارہ=atharah|انیس=unnis|بیس=bees|پچیس=pachees|تیس=tees|چالیس=chalis|پچاس=pachas|ساٹھ=saath|ستر=sattar|اسی=assi|نوے=nabbe|سو=sau|ہزار=hazar|صفر=zero|آدھا=aadha|ڈیڑھ=1.5|ڈھائی=2.5|پیزا=pizza|پیزے=pizza|برگر=burger|زنگر=zinger|بروسٹ=broast|فرائز=fries|ریپ=wrap|پراٹھا=paratha|پراٹھے=paratha|نان=naan|روٹی=roti|روٹیاں=roti|ونگز=wings|نگٹس=nuggets|شوارما=shawarma|تکہ=tikka|ٹکہ=tikka|فاجیتا=fajita|چیز=cheese|سپریم=supreme|ملائی=malai|بوٹی=boti|کباب=kabab|پیری=peri|ڈائنامائٹ=dynamite|سپیشل=special|اسپیشل=special|کولڈ=cold|ڈرنک=drink|ٹھنڈی=cold|پانی=water|بوتل=bottle|کوک=coke|پیپسی=pepsi|نیکسٹ=next|کولا=cola|منٹ=mint|مارگریٹا=margarita|لارج=large|میڈیم=medium|سمال=small|چھوٹا=chhota|چھوٹی=choti|بڑا=bara|بڑی=badi|پیس=piece|لیگ=leg|چیسٹ=chest|پیٹرول=petrol|گوشت=gosht|سبزی=sabzi|دودھ=milk|دہی=dahi|گھی=ghee|ہاں=haan|جی=ji|ٹھیک=theek|بالکل=bilkul|نہیں=nahi|نا=na|مت=mat|رکو=ruko|اور=aur|پھر=phir|ساتھ=sath|ڈالو=dal|ڈال=dal|ڈالیں=dal|لگاؤ=dal|لگا=dal|شامل=dal|چاہیے=dal|چاہئے=dal|منگواؤ=dal|منگوا=dal|کرو=kar|کر=kar|کریں=kar|دیں=de|دے=de|ہٹاؤ=hata|ہٹا=hata|نکالو=hata|نکال=hata|ختم=khatam|دوبارہ=dobara|موجود=maujood|خالی=khali|صاف=saaf|کارٹ=cart|ٹوکری=tokri|آرڈر=order|آرڈرز=orders|بل=bill|ٹوٹل=total|حساب=hisab|کتنا=kitna|کتنی=kitna|کتنے=kitna|آج=aaj|سیل=sale|بکری=bikri|خرچہ=kharcha|خرچ=kharcha|خرچے=kharcha|ادھار=udhar|منافع=munafa|روپے=rs|روپیہ=rs|روپئے=rs|ریٹ=rate|قیمت=rate|مینو=menu|دکھاؤ=dikhao|دکھائیں=dikhao|دکھا=dikhao|کھولو=kholo|کھول=kholo|ہوم=home|واپس=wapas|ڈیلیوری=delivery|ٹیک=take|اوے=away|ڈائن=dine|ان=in|کیش=cash|ادائیگی=payment|پیمنٹ=payment|جاز=jazz|ایزی=easy|پیسہ=paisa|کارڈ=card|نام=naam|فون=phone|نمبر=number|ڈسکاؤنٹ=discount|رعایت=discount|محفوظ=save|سیو=save|پرنٹ=print|بھیج=bhej|بھیجو=bhej|تصدیق=confirm|مدد=help|ڈارک=dark|رات=dark|پلس=plus|جمع=jama|مائنس=minus|منفی=minus|گنا=guna|ضرب=zarb|تقسیم=taqseem|رپورٹ=report|زکوٰۃ=zakat|زکوۃ=zakat|ڈیل=deals|ڈیلز=deals|سیٹنگ=setting|ڈیش بورڈ=dashboard|پہلا=pehla|دوسرا=doosra|تیسرا=teesra|چوتھا=chautha|کیا=kya|سیونگ=saving|بچت=saving|گلہ=galla|گلے=galla|روزنامچہ=roznamcha|سب=sab|سارا=saara|پورا=pura").split("|").forEach(p=>{const i=p.indexOf("=");UR[p.slice(0,i)]=p.slice(i+1)});
+const SY={kharch:"kharcha",kharche:"kharcha",udhaar:"udhar",kitni:"kitna",kitne:"kitna",dalo:"dal",daal:"dal",dalein:"dal",lagao:"dal",laga:"dal",shamil:"dal",add:"dal",chahiye:"dal",mangwao:"dal",mangwa:"dal",dena:"dal",hatao:"hata",nikalo:"hata",nikal:"hata",remove:"hata",delete:"hata",karo:"kar",krdo:"kar do",kardo:"kar do",dedo:"de do",karein:"kar",kijiye:"kar",rupay:"rs",rupaye:"rs",rupee:"rs",rupees:"rs",rupe:"rs",rupiya:"rs",ka:"",ki:"",ke:"",ko:"",mein:"",main:"",hai:"",he:"",hain:"",ye:"",yeh:"",mujhe:"",hamein:"",please:"",zara:"",sale:"sale",sales:"sale",bechna:"sale",one:"ek",two:"do",three:"teen",four:"char",five:"paanch",six:"chhe",seven:"saat",eight:"aath",nine:"nau",ten:"das",panch:"paanch",chay:"chhe",che:"chhe",hazaar:"hazar",sifar:"zero",chota:"chhota",chhoti:"choti",bari:"badi",bada:"bara",laarj:"large",dikhaiye:"dikhao",dekho:"dikhao",dekhao:"dikhao",batao:"dikhao",kholein:"kholo",dobara:"dobara",nafa:"munafa",bachat:"saving",galle:"galla",gale:"galla",galay:"galla",gallay:"galla",galey:"galla",baqi:"baqi",bacha:"baqi",profit:"munafa",bachat:"munafa",raayat:"discount",chhoot:"discount",sirf:"",bas:""};
+const NW={ek:1,do:2,teen:3,char:4,paanch:5,chhe:6,saat:7,aath:8,nau:9,das:10,gyarah:11,barah:12,terah:13,chaudah:14,pandrah:15,solah:16,satrah:17,atharah:18,unnis:19,bees:20,pachees:25,tees:30,chalis:40,pachas:50,saath:60,sattar:70,assi:80,nabbe:90,aadha:.5,zero:0};
+const VB=new Set(["dal","kar","hata","de","likh","likho","save","print","bhej","jama"]);
+const SZ={small:"S",chhota:"S",choti:"S",medium:"M",large:"L",bara:"L",badi:"L"};
+let P=null,snap=null,rec=null,live=false,tts=ld("cd_vtts",true);
+function norm(r){r=(r||"").toLowerCase().replace(/[\u064B-\u065F\u0670\u200c\u200d]/g,"").replace(/[يى]/g,"ی").replace(/ك/g,"ک").replace(/ه/g,"ہ").replace(/[٠-٩]/g,d=>d.charCodeAt(0)-1632).replace(/[۰-۹]/g,d=>d.charCodeAt(0)-1776).replace(/ڈیش بورڈ/g,"dashboard").replace(/[،۔,!?؟;:"'()]/g," ").replace(/\.(?!\d)/g," ");
+let t=[];r.split(/\s+/).filter(Boolean).forEach(w=>{w=UR[w]||w;w.split(" ").forEach(x=>{x=SY[x]!==undefined?SY[x]:x;x.split(" ").forEach(y=>y&&t.push(y))})});
+return t.map((w,i)=>w=="do"&&(i==t.length-1||VB.has(t[i-1])||(VB.has(t[i+1])&&!(i&&/^\d|^(ek|do|teen)$/.test(t[i-1]))))?"do_v":w)}
+function nums(t){const r=[];let i=0;const isN=w=>/^\d+(\.\d+)?$/.test(w)||(w in NW)||w=="sau"||w=="hazar";
+while(i<t.length){if(!isN(t[i])){i++;continue}let tot=0,cur=0,s=i;
+while(i<t.length){const w=t[i];
+if(/^\d/.test(w)){if(cur)break;cur=+w}else if(w=="sau")cur=(cur||1)*100;else if(w=="hazar"){tot+=(cur||1)*1000;cur=0}
+else if(w in NW){if(cur%100!=0)break;cur+=NW[w]}else break;i++}
+r.push({v:tot+cur,s,e:i});if(i==s)i++}return r}
+const stm=w=>w.length>3?w.replace(/s$/,""):w;
+function lev(a,b){if(Math.abs(a.length-b.length)>1)return 9;const m=[];for(let i=0;i<=a.length;i++){m[i]=[i];for(let j=1;j<=b.length;j++)m[i][j]=i?Math.min(m[i-1][j]+1,m[i][j-1]+1,m[i-1][j-1]+(a[i-1]==b[j-1]?0:1)):j}return m[a.length][b.length]}
+const STOP=new Set(["ml","litre","pc","the"]);
+const IT=D.map(([c,n,pr])=>{const nm=n.replace(/\([^)]*\d[^)]*\)/g,"");let tk=(nm+" "+c).toLowerCase().replace(/(\d+)(ml)/g,"$1 $2").replace(/[^a-z0-9. ]/g," ").split(/\s+/).filter(w=>w&&!STOP.has(w)).map(stm);return{c,n,pr,t:[...new Set(tk)]}});
+function match(seg,pool){const ws=seg.map(stm),ns=nums(seg).filter(x=>x.s>0||/^(piece|pc|litre|liter)$/.test(seg[x.e]||"")).map(x=>String(x.v));let best=[],bs=0;
+(pool||IT).forEach(it=>{let ms=0,mc=0,al=0;it.t.forEach(w=>{if(/^\d/.test(w)){if(ns.includes(w)){ms++;mc++}}else if(ws.includes(w)){ms++;mc++;al++}else if(w.length>=5&&ws.some(x=>lev(x,w)<=1)){ms+=.85;mc++;al++}});
+if(!al)return;const sc=ms-(it.t.length-mc)*.25;if(sc<.45)return;if(sc>bs+.01){bs=sc;best=[it]}else if(Math.abs(sc-bs)<=.01)best.push(it)});return best}
+function qtyOf(seg,it){const ns=nums(seg);let nn=it?it.t.filter(w=>/^\d/.test(w)):[];const q=ns.filter(x=>{const k=nn.indexOf(String(x.v));if(k>-1){nn.splice(k,1);return false}return true});return q.length?q[0].v:null}
+function sizeOf(seg,it){const k=Object.keys(it.pr);if(k.length==1)return k[0];const w=seg.find(x=>SZ[x]&&k.includes(SZ[x]));return w?SZ[w]:null}
+const R2=n=>rs(n);
+function say(m,ok){const r=$("vrp");r.textContent=m;r.style.color=ok===false?"#ff9d7d":"#ffd45e";if(tts&&window.speechSynthesis&&m){try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(m.replace(/Rs /g,"روپے "));const vs=speechSynthesis.getVoices();const v=vs.find(x=>/^ur/i.test(x.lang))||vs.find(x=>/^hi/i.test(x.lang));u.lang=v?v.lang:"ur-PK";if(v)u.voice=v;u.onend=()=>{if(live&&$("vco").checked)start()};speechSynthesis.speak(u)}catch(e){}}}
+const OWNR=()=>{if(adm)return true;say("یہ صرف اونر کے لیے ہے۔ پہلے اونر لاگ اِن کریں۔",false);return false};
+const line=x=>x.q+" × "+x.n+(x.s&&x.s!="-"?" ("+x.s+")":"");
+function addItems(segs,rm){const done=[],bad=[];snap=JSON.stringify(cart);
+for(const seg of segs){const c=match(seg);if(!c.length){if(seg.some(w=>/[a-z]{3,}/.test(w)&&!VB.has(w)&&!/^(aur|phir|sath|cart|order|ek|menu|dal|hata|kar)$/.test(w)))bad.push(seg.join(" "));continue}
+if(c.length>1){const cat=c.every(x=>x.c==c[0].c);if(cat&&c.length>6&&!nums(seg).length){view="menu";cat=c[0].c;R();say(c[0].c+" کا مینو کھول دیا، آئٹم کا نام بولیں۔");return null}P={t:"pick",c:c.slice(0,6),q:qtyOf(seg,null),seg,rm};say("کون سا؟ "+c.slice(0,6).map((x,i)=>(i+1)+") "+x.n).join("، "));return null}
+const it=c[0];if(!applyOne(it,seg,rm,done,bad))continue}
+if(!done.length&&!bad.length)return undefined;
+let m=done.length?(rm?"ہٹا دیا: ":"شامل کر دیا: ")+done.join("، ")+"۔ ٹوٹل "+R2(total()):"";if(bad.length)m+=(m?" ":"")+"سمجھ نہیں آیا: "+bad.join("، ");R();return m||undefined}
+function applyOne(it,seg,rm,done,bad){if(off(it.n)){bad.push(it.n+" (ختم ہے)");return false}const q=qtyOf(seg,it);let s=sizeOf(seg,it);if(!s){if(it.pr.M)s="M";else s=Object.keys(it.pr)[0]}
+const k=key(it.n,s),base=it.pr[s],p=price(it.n,s,base);
+if(rm){const e=cart[k]||Object.values(cart).find(x=>x.n==it.n);if(!e){bad.push(it.n+" کارٹ میں نہیں");return false}const kk=Object.keys(cart).find(z=>cart[z]===e);if(q)e.q-=q;else e.q=0;if(e.q<=0)delete cart[kk];done.push((q||"سب")+" × "+it.n);return true}
+const n=q||1;cart[k]=cart[k]||{n:it.n,s,p,q:0};cart[k].q+=n;done.push(n+" × "+it.n+(s!="-"?" ("+s+")":""));return true}
+function pickCand(t,cands){const c=match(t,cands);return c.length==1?c[0]:null}
+const o0=w=>["pehla","doosra","teesra","chautha"].includes(w);
+const TABS={kharcha:"kharcha",udhar:"udhar",orders:"orders",report:"report",delivery:"delivery",zakat:"zakat",deals:"deals",setting:"setting",dashboard:"aaj",home:"aaj",data:"data",pin:"data",rate:"menu"};
+function todayOs(){const d=bd(Date.now());return orders.filter(o=>bd(o.id)==d&&o.st!="Cancel")}
+function digits(t){const D2={zero:0,ek:1,do:2,teen:3,char:4,paanch:5,chhe:6,saat:7,aath:8,nau:9};return t.map(w=>/^\d+$/.test(w)?w:(w in D2?String(D2[w]):"")).join("")}
+function exec(raw){const t=norm(raw);if(!t.length)return undefined;const s=t.join(" "),has=r=>r.test(s);
+if(has(/\b(help|madad|kya kya)\b|kya kar sakt/))return "میں یہ کر سکتا ہوں: آرڈر میں آئٹم ڈالنا/ہٹانا (مثلاً «2 زنگر برگر اور 1 لارج فاجیتا»)، کارٹ صاف کرنا، ٹوٹل بتانا، آرڈر محفوظ کرنا، صفحے کھولنا، اور اونر کے لیے آج کی سیل، خرچہ، منافع، ادھار، خرچہ لکھنا، آئٹم ختم/دستیاب کرنا اور ریٹ بدلنا۔";
+if(t.length==1&&/^(haan|ji|nahi|na|ok|theek)$/.test(t[0]))return "جی، بتائیں۔";
+if(has(/\bundo\b|\bwapas kar\b|pehle jaisa|ghalti/)){if(snap==null)return "واپس کرنے کے لیے کچھ نہیں۔";cart=JSON.parse(snap);snap=null;R();return "پچھلی تبدیلی واپس کر دی۔ ٹوٹل "+R2(total())}
+if(P){const p=P;if(p.t=="ok"){if(has(/\b(nahi|na|mat|ruko|cancel|no)\b/)){P=null;return "ٹھیک ہے، منسوخ۔"}if(has(/\b(haan|ji|theek|bilkul|yes|ok|okay|kar|save|karo)\b/)){P=null;return p.fn()}P=null}
+else if(p.t=="pick"){let c=pickCand(t,p.c);if(!c){const n=nums(t)[0];if(n&&p.c[n.v-1])c=p.c[n.v-1];else{const k=t.find(o0);if(k)c=p.c[["pehla","doosra","teesra","chautha"].indexOf(k)]}}
+P=null;if(c){const done=[],bad=[];snap=JSON.stringify(cart);const seg=p.seg.slice();if(p.q&&!qtyOf(seg,c))seg.push(String(p.q));if(p.fn)return p.fn(c);applyOne(c,seg,p.rm,done,bad);R();return (done.length?(p.rm?"ہٹا دیا: ":"شامل کر دیا: ")+done.join("، ")+"۔ ٹوٹل "+R2(total()):"")+(bad.length?" "+bad.join("، "):"")}}}
+if(has(/\b(cart|tokri|order)\b.*\b(khali|saaf|clear)\b|\b(khali|saaf|clear)\b.*\b(cart|tokri|order)\b|\b(sab|saara|pura)\b.*\bhata\b/)){snap=JSON.stringify(cart);cart={};R();return "کارٹ خالی کر دیا۔ (واپس کے لیے «undo» بولیں)"}
+if(has(/\bgalla\b/)&&has(/\b(kitna|baqi)\b/)){if(!OWNR())return null;return "گلے میں "+R2(dayStat(bd(Date.now())).close)+" باقی ہیں۔"}
+if(has(/\broznamcha\b/)&&has(/\bprint\b/)){if(!OWNR())return null;prReg(bd(Date.now()));return "روزنامچہ پرنٹ کر رہا ہوں۔"}
+if(has(/\bsaving\b/)){if(!OWNR())return null;const d=bd(Date.now()),n=nums(t);if(has(/\bkitna\b/)||!n.length)return "آج کی سیونگ "+R2(chefSav.of(d));const a=n[n.length-1].v;P={t:"ok",fn:()=>{chefSav.add(d,a,"(awaaz)");return "سیونگ "+R2(a)+" لکھ دی۔ گلے میں باقی "+R2(dayStat(d).close)}};return R2(a)+" سیونگ لکھوں؟ «ہاں» بولیں۔"}
+{const ns=nums(t),OP={plus:"+",jama:"+",minus:"-",ghata:"-",guna:"*",zarb:"*",taqseem:"/"},ops=t.filter(w=>OP[w]);if(ns.length>=2&&ops.length==ns.length-1&&!has(/\b(kharcha|udhar)\b/)){let v=ns[0].v;ops.forEach((o,i)=>{const b=ns[i+1].v,c=OP[o];v=c=="+"?v+b:c=="-"?v-b:c=="*"?v*b:(b?v/b:NaN)});return "جواب: "+(Number.isFinite(v)?Math.round(v*100)/100:"؟")}}
+if(has(/\b(total|bill|hisab)\b/)&&has(/\bkitna\b|\bdikhao\b/)&&!has(/\b(sale|aaj)\b/))return cnt()?"کارٹ میں "+cnt()+" آئٹم ہیں، ٹوٹل "+R2(total()+(typeof fee=="function"?fee():0)-(typeof dsc=="function"?dsc():0)):"کارٹ خالی ہے۔";
+if(has(/\bkitna\b|\bmunafa\b/)&&has(/\b(sale|bikri|kharcha|udhar|munafa|orders|order)\b/)){if(!OWNR())return null;const os=todayOs(),sl=os.reduce((a,o)=>a+o.tot,0),ex=exp.filter(x=>x.t==bd(Date.now())).reduce((a,x)=>a+x.a,0);
+if(has(/munafa/))return "آج کی سیل "+R2(sl)+"، خرچہ "+R2(ex)+"، بچت "+R2(sl-ex);if(has(/kharcha/))return "آج کا خرچہ "+R2(ex);if(has(/udhar/))return "کل ادھار "+R2(udTotal());if(has(/orders?/)&&!has(/sale/))return "آج "+os.length+" آرڈر ہوئے۔";return "آج کی سیل "+R2(sl)+" ("+os.length+" آرڈر)"}
+if(has(/\b(dark|theme|andhera)\b/)){tm();return "تھیم بدل دی۔"}
+if(has(/\b(discount)\b/)&&nums(t).length){if(!OWNR())return null;f.dc=nums(t)[0].v;R();return "ڈسکاؤنٹ "+R2(f.dc)+" لگا دیا۔"}
+if(has(/\bphone\b|\bnumber\b/)){const d=digits(t);if(d.length>=10){f.ph=d;R();return "فون نمبر "+d+" لکھ دیا۔"}}
+if(has(/\bnaam\b/)){const w=(raw||"").split(/[\s،,]+/).filter(Boolean),i=w.findIndex(x=>/^(naam|nam|نام)$/i.test(x)),nm=w.slice(i+1).filter(x=>!/^(hai|likho|likh|kar|do|dal|ہے|لکھو|کرو|دو|ڈالو)$/i.test(x)).join(" ")||w.slice(0,i).filter(x=>!/^(ka|ki|کا|کی|گاہک|customer)$/i.test(x)).join(" ");if(nm){f.nm=nm;R();return "نام «"+nm+"» لکھ دیا۔"}}
+if(has(/\b(dine|take away|takeaway|delivery)\b/)&&!has(/\b(dikhao|kholo)\b/)){const nt=has(/dine/)?"Dine-in":has(/take ?away/)?"Takeaway":"Delivery";if(nt=="Dine-in"&&!(adm||TB))return "ڈائن اِن صرف کاؤنٹر پر ہے۔";ty=nt;R();return "آرڈر کی قسم: "+nt}
+if(has(/jazz ?cash|easy ?paisa|\bcash\b|\bcard\b|\budhar\b/)&&has(/\bpayment\b|\b(par|se)\b|\bkar\b/)&&!has(/\b(dikhao|kholo|kitna|kharcha)\b/)){const q=has(/jazz/)?"JazzCash":has(/easy/)?"Easypaisa":has(/card/)?"Card":has(/udhar/)?"Udhar":adm?"Cash":"COD";if((q=="Card"||q=="Udhar")&&!adm)return "یہ ادائیگی صرف کاؤنٹر پر ہے۔";pm=q;R();return "ادائیگی: "+q}
+if(has(/\bprint\b|\bparchi\b/)&&adm&&orders[0]){pr(orders[0].id);return "آخری بل پرنٹ کر رہا ہوں۔"}
+if(has(/\b(save|confirm|pakka|place|bhej)\b/)&&!has(/\bdal\b/)){if(!cnt())return "کارٹ خالی ہے۔";if(!adm){view="cart";R();return "نام اور پتہ لکھ کر نیچے سے آرڈر بھیج دیں۔"}const pp=has(/print/);P={t:"ok",fn:()=>{if(pm=="Udhar"&&!(f.nm||"").trim())return "ادھار کے لیے گاہک کا نام بولیں۔";place(0,pp?1:0);return "آرڈر محفوظ ہو گیا۔"}};return "آرڈر محفوظ کروں؟ "+cnt()+" آئٹم، "+R2(total())+"۔ «ہاں» بولیں۔"}
+if(has(/\bkharcha\b/)&&nums(t).length&&!has(/\b(dikhao|kholo)\b/)){if(!OWNR())return null;const a=nums(t).pop().v,cat=XC.find(c=>c.toLowerCase().split(/[^a-z]+/).some(w=>w.length>2&&t.includes(w)))||"Other";P={t:"ok",fn:()=>{exp.unshift({id:Date.now(),t:bd(Date.now()),d:cat,n:"(awaaz)",a});sv("cd_exp",exp);R();return "خرچہ لکھ دیا: "+cat+" "+R2(a)}};return cat+" کا خرچہ "+R2(a)+" لکھوں؟ «ہاں» بولیں۔"}
+if(has(/\b(khatam|dobara|maujood|available)\b/)){if(!OWNR())return null;const on=has(/\b(dobara|maujood|available)\b/),fn=it=>{tg(it.n,!on);R();return it.n+(on?" دوبارہ دستیاب۔":" ختم کر دیا۔")},c=match(t);if(!c.length)return null;if(c.length>1){P={t:"pick",c:c.slice(0,6),seg:t,fn};return "کون سا؟ "+c.slice(0,6).map((x,i)=>(i+1)+") "+x.n).join("، ")}return fn(c[0])}
+if(has(/\brate\b/)&&nums(t).length&&match(t).length){if(!OWNR())return null;const c=match(t);if(c.length>1)return "پورا نام بولیں: "+c.slice(0,4).map(x=>x.n).join("، ");const it=c[0],sz=sizeOf(t,it);if(!sz)return "سائز بھی بولیں (چھوٹا/میڈیم/لارج)۔";const v=qtyOf(t,it);if(!v)return null;P={t:"ok",fn:()=>{sp(it.n,sz,v);R();return it.n+" کا ریٹ "+R2(v)+" ہو گیا۔"}};return it.n+(sz!="-"?" ("+sz+")":"")+" کا ریٹ "+R2(v)+" کروں؟ «ہاں» بولیں۔"}
+const tabk=t.find(w=>TABS[w]);if(tabk&&!match(t).length||(tabk&&has(/\b(dikhao|kholo)\b/))){if(!OWNR())return null;go(TABS[tabk]);return "کھول دیا۔"}
+if(has(/\b(cart|tokri)\b/)&&!match(t).length){view="cart";R();return "کارٹ کھول دیا۔"}
+if(has(/\bmenu\b/)&&!match(t).length||(has(/\b(dikhao|kholo)\b/)&&t.length<4&&CATS.some(c=>t.map(stm).includes(stm(c.toLowerCase()))))){const c=CATS.find(c=>t.map(stm).includes(stm(c.toLowerCase())));if(c)cat=c;view="menu";R();return c?c+" کا مینو کھول دیا۔":"مینو کھول دیا۔"}
+const rm=t.includes("hata"),segs=[];let cur=[];t.forEach(w=>{if(/^(aur|phir|sath)$/.test(w)){if(cur.length)segs.push(cur);cur=[]}else cur.push(w)});if(cur.length)segs.push(cur);
+return addItems(segs,rm)}
+function run(list){const arr=Array.isArray(list)?list:[list];let out;for(const x of arr){out=exec(x);if(out!==undefined)break}
+if(out===undefined||out===null){if(out===undefined)say("سمجھ نہیں آیا۔ دوبارہ بولیں، مثلاً «دو زنگر برگر ڈالو»۔",false);return}if(typeof out=="string")say(out)}
+function start(){const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){say("اس براؤزر میں آواز نہیں چلتی۔ Chrome استعمال کریں یا نیچے لکھ کر بھیجیں۔",false);return}
+if(rec){try{rec.abort()}catch(e){}}try{speechSynthesis.cancel()}catch(e){}
+rec=new SR();rec.lang="ur-PK";rec.interimResults=true;rec.maxAlternatives=3;const mb=$("vmic");
+rec.onstart=()=>{mb.classList.add("on");$("vtr").textContent="سن رہا ہوں…"};
+rec.onresult=e=>{const r=e.results[e.results.length-1];$("vtr").textContent=r[0].transcript;if(r.isFinal)run([...r].map(x=>x.transcript))};
+rec.onerror=e=>{mb.classList.remove("on");live=false;say(e.error=="not-allowed"||e.error=="service-not-allowed"?"مائیک کی اجازت دیں (اور سائٹ https پر ہو)۔":e.error=="no-speech"?"کچھ سنائی نہیں دیا۔":"آواز میں مسئلہ: "+e.error,false)};
+rec.onend=()=>{mb.classList.remove("on");if(live&&$("vco").checked&&!(window.speechSynthesis&&speechSynthesis.speaking))setTimeout(start,300)};
+try{live=true;rec.start()}catch(e){}}
+function stop(){live=false;try{rec&&rec.abort()}catch(e){}try{speechSynthesis.cancel()}catch(e){}$("vmic").classList.remove("on")}
+const open=v=>{$("vp").hidden=!v;$("vfab").style.display=v?"none":"";if(!v)stop()};
+$("vfab").onclick=()=>{open(true);start()};$("vx").onclick=()=>open(false);
+$("vmic").onclick=()=>$("vmic").classList.contains("on")?stop():start();
+$("vtts").textContent=tts?"🔊":"🔇";$("vtts").onclick=()=>{tts=!tts;sv("cd_vtts",tts);$("vtts").textContent=tts?"🔊":"🔇";if(!tts)try{speechSynthesis.cancel()}catch(e){}};
+const go2=()=>{const v=$("vtx").value.trim();if(!v)return;$("vtr").textContent=v;$("vtx").value="";run(v)};$("vgo").onclick=go2;$("vtx").onkeydown=e=>{if(e.key=="Enter")go2()};
+["2 zinger burger dalo","aik large fajita pizza","cart dikhao","total kitna","order save karo","undo","aaj ki sale kitni","500 petrol kharcha","1000 saving","galle mein kitna baqi","roznamcha print","madad"].forEach(x=>{const b=document.createElement("button");b.textContent=x;b.onclick=()=>{$("vtr").textContent=x;run(x)};$("vch").appendChild(b)});
+document.addEventListener("keydown",e=>{if(e.altKey&&e.key.toLowerCase()=="v"){e.preventDefault();$("vp").hidden?$("vfab").click():open(false)}});
+window.chefVoice={exec,norm,run};
+})();
+</script>
+
+</body></html>
