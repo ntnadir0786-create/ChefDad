@@ -1,0 +1,621 @@
+<!DOCTYPE html><html lang="ur"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="icon" type="image/png" href="data:image/png;base64,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"><link rel="apple-touch-icon" href="data:image/png;base64,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"><title>Chef Dad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf1df;--card:#fffaf0;--tx:#2b1a10;--mu:#8a7256;--ac:#d6410d;--gold:#a9752c;--bd:#e8d7b4;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:16px system-ui,sans-serif;padding-bottom:170px}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif}
+.hero{background:linear-gradient(160deg,#1b120a,#3a1c0f 55%,#5e2410);color:#f6e7c9;padding:18px 14px 22px;border-radius:0 0 28px 28px;box-shadow:0 10px 24px rgba(20,8,2,.35);border-bottom:2px solid #caa54e}
+.hero .t{display:flex;align-items:center;gap:12px;max-width:760px;margin:auto}.hero svg{width:56px;height:56px;flex:none}
+.hero h1{margin:0;font-size:27px;letter-spacing:.5px;color:#f1cd7e}.hero small{display:block;opacity:.85;font-size:12px;color:#d9c3a0}
+.hero .ct{display:flex;gap:8px;max-width:760px;margin:12px auto 0;flex-wrap:wrap}.hero a{text-decoration:none}.hero button.g{background:transparent;color:#f1cd7e;border:1px solid #caa54e}
+button{font:inherit;cursor:pointer;border:0;border-radius:10px;padding:9px 14px;background:var(--ac);color:#fff8ec;font-weight:600;letter-spacing:.2px}button.g{background:transparent;color:var(--tx);border:1px solid var(--gold)}
+nav{display:flex;gap:8px;overflow-x:auto;padding:10px 12px;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:4;max-width:760px;margin:auto}nav button{white-space:nowrap}
+main{padding:0 12px;max-width:760px;margin:auto}h2{margin:18px 0 10px;font-size:23px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(min-width:700px){.grid{grid-template-columns:1fr 1fr 1fr}}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;overflow:hidden}.card.off{opacity:.45}
+.img{height:120px;display:flex;align-items:center;justify-content:center;background:linear-gradient(160deg,#2a1710,#4a2512);background-size:cover;background-position:center;position:relative}
+.hot{position:absolute;top:8px;left:8px;background:var(--ac);color:#fff;font-size:11px;padding:3px 8px;border-radius:999px;font-weight:700}
+.card .b{padding:10px}.card h3{margin:0 0 8px;font-size:15px;line-height:1.25;font-weight:700}
+.sz{display:flex;flex-wrap:wrap;gap:6px}.sz button{font-size:13px;padding:6px 10px;background:transparent;border:1px solid var(--gold);color:var(--tx)}
+.deal{background:linear-gradient(90deg,#2a1710,#4a2512);color:#f1cd7e;border:1px solid #caa54e;border-radius:12px;padding:10px 14px;margin:8px 0;font-weight:700}
+.it,.pn{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:12px;margin:10px 0}.it{margin:8px 0}.it b{display:block}
+.row{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px;align-items:center}
+input,select,textarea{font:inherit;width:100%;padding:11px;border:1px solid var(--bd);border-radius:10px;background:var(--card);color:var(--tx);margin:4px 0}
+#bar{position:fixed;left:10px;right:10px;bottom:70px;padding:10px 14px;background:#2a1710;color:#f1cd7e;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.35);display:none;justify-content:space-between;align-items:center;max-width:740px;margin:auto;border:1px solid #caa54e}#bar button{background:var(--ac);color:#fff}
+.pn input.p{width:90px}.st{font-size:13px;color:var(--mu)}.tag{font-size:12px;padding:2px 8px;border-radius:999px;background:var(--bd)}table{width:100%;border-collapse:collapse}td{padding:4px 2px;border-bottom:1px solid var(--bd);font-size:14px}
+#rc{display:none;width:72mm;font:12px/1.4 monospace;color:#000;background:#fff}#rc table{width:100%}#rc td{border:0;padding:1px 0;font-size:12px}
+@media print{body>*:not(#rc){display:none!important}#rc{display:block!important}}
+
+:root[data-theme=dark]{--bg:#140d07;--card:#211608;--tx:#f3e4c8;--mu:#c2a97e;--gold:#e3b24d;--bd:#3a2a14;--ac:#ff6a2e;color-scheme:dark}
+[data-theme=dark] input,[data-theme=dark] select,[data-theme=dark] textarea{background:#241a0d}
+[data-theme=dark] button.g{color:#f3e4c8;border-color:#e3b24d}[data-theme=dark] .sz button{border-color:#e3b24d;color:#f3e4c8}
+[data-theme=dark] .img{background:linear-gradient(160deg,#1a1109,#3a2210)}[data-theme=dark] .fv{background:#241a0d}
+.sz button{font-size:15px;padding:8px 12px}.sz button small{opacity:.8;font-size:12px}.sz button b{font-size:19px}
+.it span{font-size:18px;font-weight:700}#bar b{font-size:21px}.card{animation:up .35s both;transition:transform .15s}.card:active{transform:scale(.98)}
+@keyframes up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.fv{position:absolute;top:8px;right:8px;background:var(--card);border-radius:50%;width:34px;height:34px;padding:0;font-size:18px;line-height:34px;border:1px solid var(--bd)}
+#rc td{font-size:14px}
+</style>
+<style id="th2">
+/* ===== v6 theme: chulha-garam (ember + saffron + pistachio) ===== */
+:root{--bg:#fff3dc;--card:#fffdf8;--tx:#2a1810;--mu:#8b6f50;--ac:#d8420f;--gold:#b07a1f;--bd:#f0dcb0;--glow:rgba(242,165,22,.24);--glow2:rgba(216,66,15,.07)}
+:root[data-theme=dark]{--glow:rgba(242,165,22,.10);--glow2:rgba(216,66,15,.10)}
+body{font-family:Nunito,system-ui,-apple-system,sans-serif;font-weight:500;background:radial-gradient(900px 420px at 90% 0,var(--glow),transparent 70%),radial-gradient(700px 420px at -10% 38%,var(--glow2),transparent 70%),var(--bg)}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif}
+main>h2{font-size:25px;margin:20px 0 12px}
+main>h2::after{content:"";display:block;width:42px;height:3px;border-radius:3px;margin-top:6px;background:linear-gradient(90deg,#d8420f,#f2a516)}
+
+/* hero */
+.hero{position:relative;background:radial-gradient(520px 240px at 90% 0,rgba(255,140,40,.38),transparent 70%),linear-gradient(160deg,#1a100a,#3b1a0e 55%,#6a2711);border-bottom:0;padding-bottom:32px}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:9px;border-radius:0 0 28px 28px;background:repeating-linear-gradient(135deg,#f2a516 0 9px,#d8420f 9px 18px,#2f7d4f 18px 27px)}
+.hero h1{font-size:29px;color:#f6d98a;text-shadow:0 2px 14px rgba(242,165,22,.35)}
+
+/* buttons */
+button{border-radius:12px;background:linear-gradient(180deg,#e8541f,#c93a0c);box-shadow:0 2px 0 #8e2a08,0 8px 16px -8px rgba(200,58,12,.6);transition:transform .08s,box-shadow .08s}
+button:active{transform:translateY(2px);box-shadow:0 0 0 #8e2a08,0 3px 8px -5px rgba(200,58,12,.5)}
+button.g{background:transparent;box-shadow:none;border:1.5px solid var(--gold)}
+button.g:active{transform:scale(.97)}
+.fv{box-shadow:0 2px 8px rgba(0,0,0,.3)}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,.sc:focus-visible{outline:3px solid #f2b83d;outline-offset:2px}
+
+/* tabs */
+nav,#otabs{scrollbar-width:none}nav::-webkit-scrollbar,#otabs::-webkit-scrollbar{display:none}
+nav button,#otabs button{border-radius:999px;padding:8px 15px}
+nav{top:calc(env(safe-area-inset-top,0px) + var(--sbh,0px))}
+#otabs{top:calc(env(safe-area-inset-top,0px) + var(--sbh,0px))!important}
+
+/* cards & panels */
+.card{border-radius:18px;box-shadow:0 8px 20px -8px rgba(120,60,10,.28)}
+.card h3{font-size:16px;line-height:1.25}
+.img{height:128px;background:radial-gradient(circle at 30% 20%,#5c2c14,#22110a)}
+.hot{background:linear-gradient(90deg,#d8420f,#f2711c);box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.sz button{border-radius:12px;border:1.5px solid var(--gold);background:transparent;box-shadow:none}
+.sz button b{color:var(--ac)}
+.sz button:active{background:var(--ac);color:#fff}.sz button:active b,.sz button:active small{color:#fff}
+.it,.pn{border-radius:16px;box-shadow:0 4px 14px -8px rgba(120,60,10,.35)}
+.tag{background:rgba(242,165,22,.25);color:var(--tx);font-weight:700}
+.deal{background:linear-gradient(90deg,#2a1710,#5a2a14);border-radius:14px;box-shadow:0 6px 16px -8px rgba(0,0,0,.5)}
+td{border-bottom:1px dashed var(--bd)}
+input,select,textarea{border:1.5px solid var(--bd);border-radius:12px}
+input:focus,select:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(242,165,22,.25)}
+#bar{background:linear-gradient(90deg,#2a1710,#5a2a14);border-radius:999px}
+
+/* ===== top summary panel (calculator display) ===== */
+#sumbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:13;max-width:760px;margin:0 auto;padding:10px 10px 6px;background:linear-gradient(var(--bg) 78%,transparent)}
+.lcd{display:grid;grid-template-columns:1fr 1fr 1fr;overflow:hidden;border:1.5px solid #caa54e;border-radius:16px;background:radial-gradient(120% 150% at 50% 0,#2b2218,#120d08);box-shadow:inset 0 0 24px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.07),0 10px 22px -10px rgba(60,25,5,.6)}
+.sc{display:flex;flex-direction:column;gap:3px;min-width:0;padding:9px 10px 8px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.sc+.sc{border-left:1px solid rgba(202,165,78,.28)}
+.sc:active{background:rgba(255,255,255,.06)}
+.sl{font:800 12px/1 Nunito,system-ui,sans-serif;color:#e3cfa8}
+.sv{font:700 clamp(15px,4.8vw,21px)/1.15 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-variant-numeric:tabular-nums;white-space:nowrap;text-shadow:0 0 12px currentColor}
+.sv i{font-style:normal;font-size:.55em;opacity:.7;margin-right:3px}
+.ss{font:600 11px/1 Nunito,system-ui,sans-serif;color:#a8937a}
+.s1 .sv{color:#8df59a}.s2 .sv{color:#ff9d7d}.s3 .sv{color:#ffd45e}
+@media(prefers-reduced-motion:reduce){.card{animation:none}*{transition:none!important}}
+</style>
+<style id="th3">
+/* ===== v7 professional theme ===== */
+:root{--bg:#f5f2ec;--card:#fff;--tx:#1d1916;--mu:#756b5f;--ac:#c2410c;--gold:#a16207;--bd:#e6e0d4;--glow:transparent;--glow2:transparent}
+:root[data-theme=dark]{--bg:#0e0c0a;--card:#181512;--tx:#f1ebe0;--mu:#a89c88;--ac:#ea580c;--gold:#d4a24a;--bd:#2c2620;--glow:transparent;--glow2:transparent}
+body{background:var(--bg);font-weight:500}
+h2{font-family:Nunito,system-ui,sans-serif;font-weight:800;letter-spacing:-.2px}
+.card h3{font-family:Nunito,system-ui,sans-serif;font-weight:800;font-size:15px}
+main>h2::after{background:var(--ac);width:34px;height:3px}
+.hero{background:linear-gradient(135deg,#17110d,#2b1a10);box-shadow:0 8px 24px -12px rgba(0,0,0,.5);padding-bottom:26px}
+.hero::after{height:4px;background:linear-gradient(90deg,#c2410c,#d4a24a,#c2410c)}
+.hero h1{color:#f3dfae;text-shadow:none;font-size:26px}
+button{background:var(--ac);box-shadow:none;border-radius:10px;font-weight:700}
+button:active{transform:scale(.97);box-shadow:none}
+button.g{background:var(--card);border:1px solid var(--bd);color:var(--tx)}
+.hero button.g{background:transparent}
+.card{border-radius:14px;border:1px solid var(--bd);box-shadow:0 1px 2px rgba(0,0,0,.06),0 8px 18px -12px rgba(0,0,0,.3)}
+.it,.pn{border-radius:14px;box-shadow:0 1px 2px rgba(0,0,0,.05)}
+.it.off{opacity:.5}
+.img{background:linear-gradient(160deg,#2b1a10,#4a2a16)}
+.hot{background:var(--ac);box-shadow:none}
+.tag{background:var(--bd);color:var(--tx)}
+.deal{background:var(--card);color:var(--tx);border:1px solid var(--bd);border-left:4px solid var(--ac);border-radius:12px;box-shadow:none}
+.dl{line-height:1.6}
+input,select,textarea{border:1px solid var(--bd);border-radius:10px}
+input:focus,select:focus,textarea:focus{border-color:var(--ac);box-shadow:0 0 0 3px rgba(194,65,12,.15)}
+#bar{background:#1d1916;border:0;border-radius:14px;color:#fff}
+.sz button b{color:var(--ac)}
+td{border-bottom:1px solid var(--bd)}
+
+/* top dock: folder tabs sab se upar, uske neeche Sale/Kharcha/Udhar */
+#topdock{position:sticky;top:0;z-index:30;background:var(--bg);border-bottom:1px solid var(--bd);padding-top:env(safe-area-inset-top,0px);box-shadow:0 6px 16px -12px rgba(0,0,0,.4)}
+#tabbar{position:relative;display:flex;gap:3px;overflow-x:auto;padding:8px 10px 0;max-width:760px;margin:auto;scrollbar-width:none}
+#tabbar::-webkit-scrollbar{display:none}
+#tabbar button{flex:0 0 auto;display:flex;align-items:center;gap:6px;white-space:nowrap;background:transparent;color:var(--mu);border:1px solid transparent;border-bottom:3px solid transparent;border-radius:10px 10px 0 0;padding:8px 12px;font-size:14px;font-weight:700;box-shadow:none}
+#tabbar button.on{color:var(--tx);background:var(--card);border-color:var(--bd);border-bottom-color:var(--ac)}
+#sumbar{position:static;padding:8px 10px;background:none;max-width:760px;margin:auto}
+.lcd{border:1px solid #3a3027;border-radius:12px}
+.sc{padding:7px 10px 6px}
+nav{top:calc(env(safe-area-inset-top,0px) + var(--sbh,0px))}
+</style>
+</head><body>
+<div class="hero"><div class="t"><svg onclick="lg()" viewBox="0 0 400 400"><circle cx="200" cy="200" r="190" fill="#fff"/><g fill="#d9480f"><circle cx="150" cy="150" r="42"/><circle cx="200" cy="125" r="48"/><circle cx="250" cy="150" r="42"/><rect x="150" y="150" width="100" height="70"/><rect x="146" y="226" width="108" height="26" rx="6"/></g><text x="200" y="320" text-anchor="middle" font-family="'Playfair Display',Georgia,serif" font-weight="bold" font-size="52" fill="#9c6a1f">CHEF DAD</text></svg><div style="flex:1"><h1>CHEF DAD</h1><small>Pizza • Burger • Broast • Shah Sadar Din, D.G. Khan</small></div><button class="g" onclick="tm()">🌓</button><button class="g" id="ownb" style="display:none" onclick="go('home')">⚙️ Owner</button><button class="g" id="ctrb" style="display:none" onclick="view='cart';R()">🛒 Counter order</button></div><div class="ct"><a href="tel:03155921480"><button class="g">📞 Call karein</button></a><a href="https://wa.me/923155921480"><button class="g">💬 WhatsApp</button></a></div></div>
+<main id="app"></main>
+<div id="bar"><b id="tot"></b><button onclick="V('cart')">Cart dekhein →</button></div>
+<div id="rc"></div>
+<script>
+const WA="923155921480";
+const _pr=window.print;window.print=function(){const w=st.pw||72;let s=document.getElementById("pgsz");if(!s){s=document.createElement("style");s.id="pgsz";document.head.appendChild(s)}s.textContent="@page{size:"+w+"mm auto;margin:0}@media print{#rc{zoom:"+((st.ps||100)/100)+"}}";_pr.call(window)};
+const D=[
+["Pizza","Fajita",{S:500,M:1050,L:1350}],["Pizza","Tikka",{S:500,M:1050,L:1350}],["Pizza","Supreme",{S:550,M:1050,L:1350}],["Pizza","Cheese Lover",{S:500,M:1050,L:1350}],["Pizza","Malai Boti",{S:600,M:1150,L:1500}],["Pizza","Crown Crust Chicken & Kabab",{S:600,M:1100,L:1550}],["Pizza","Kabab Stuff",{S:600,M:1150,L:1550}],["Pizza","Chicken Cheese Stuff",{S:650,M:1200,L:1600}],["Pizza","Peri Peri",{S:600,M:1150,L:1550}],["Pizza","Dynamite Pizza",{S:600,M:1150,L:1600}],["Pizza","Chef Dad Special",{S:600,M:1100,L:1500}],
+["Burger","Zinger Burger",{"-":350}],["Burger","Pizza Burger",{"-":450}],["Burger","Grilled Burger",{"-":400}],["Burger","Patty Burger",{"-":290}],["Burger","Mighty Burger",{"-":600}],["Burger","Tower Burger",{"-":550}],["Burger","Fillet Burger",{"-":450}],
+["Broast","1 Piece Broast",{"-":300}],["Broast","3 Piece (1 dip, 1 bun)",{"-":800}],["Broast","6 Piece (2 dip, 1 bun)",{"-":1550}],["Broast","9 Piece (2 dip, 2 bun)",{"-":2300}],["Broast","Leg Piece",{"-":150}],["Broast","Chest Piece",{"-":180}],
+["Fries","Plain Fries",{M:250,L:450}],["Fries","Loaded Fries",{M:400,L:700}],["Fries","Pizza Fries",{M:450,L:750}],["Fries","Masala Fries",{M:300,L:500}],["Fries","Mayo Fries",{M:350,L:550}],
+["Wraps","Zinger Wrap",{"-":450}],["Wraps","Grilled Wrap",{"-":450}],["Wraps","BBQ Wrap",{"-":500}],["Wraps","Tortila Wrap",{"-":500}],
+["Paratha","Zinger Paratha",{"-":400}],["Paratha","Pizza Paratha",{"-":500}],["Paratha","Cheese Paratha",{"-":350}],
+["Bread","Naan",{"-":25}],["Bread","Roti",{"-":20}],
+["Appetizer","Fat Wings (5 pc)",{"-":300}],["Appetizer","Nuggets (5 pc)",{"-":300}],["Appetizer","Baked Wings",{"-":350}],["Appetizer","Chicken Shawarma",{"-":250}],["Appetizer","Zinger Shawarma",{"-":350}],
+["Drinks","Water Bottle (Choti)",{"-":50}],["Drinks","Water Bottle (Badi)",{"-":100}],["Drinks","Cold Drink 250ml",{"-":80}],["Drinks","Cold Drink 345ml",{"-":100}],["Drinks","Cold Drink 500ml",{"-":120}],["Drinks","Cold Drink 1 Litre",{"-":170}],["Drinks","Cold Drink 1.5 Litre",{"-":220}],["Drinks","Cold Drink 2.5 Litre",{"-":250}],["Drinks","Mint Margarita",{"-":200}],["Drinks","Coke 300ml",{"-":90}],["Drinks","Pepsi 350ml",{"-":100}],["Drinks","Next Cola",{"-":80}]];
+const CATS=[...new Set(D.map(d=>d[0]))];
+const ld=(k,f)=>{try{return JSON.parse(localStorage.getItem(k))||f}catch(e){return f}};
+const sv=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
+const OV0={};
+let ov=Object.assign({},OV0,ld("cd_ov",{})),orders=ld("cd_orders",[]),pin=ld("cd_pin","1234"),cart={},view="menu",cat="Pizza",adm=ld("cd_adm",false),mode="online",delIds=ld("cd_del",[]),zk=ld("cd_zk",0),exp=ld("cd_exp",[]);
+function addExp(){const c=document.getElementById("ec").value,n=document.getElementById("ed").value.trim(),a=+document.getElementById("ea").value;if(!a||a<=0){alert("Amount likhein");return}exp.unshift({id:Date.now(),t:bd(Date.now()),d:c,n,a});sv("cd_exp",exp);R()}
+function delExp(id){exp=exp.filter(x=>x.id!=id);sv("cd_exp",exp);R()}
+function histV(){const g={};orders.forEach(o=>{if(o.st=="Cancel")return;const d=bd(o.id);if(!g[d])g[d]={s:0,c:0,cash:0,udhar:0};g[d].s+=o.tot;g[d].c++;if(o.paid)g[d].cash+=o.tot;if(o.pm=="Udhar"&&!o.paid)g[d].udhar+=o.tot});const ks=Object.keys(g);return `<h2>📅 Pichla Record</h2><div class="row"><button class="g" onclick="view='admin';R()">← Dashboard</button></div>${ks.map(d=>`<div class="pn"><b>${d}</b><div class="st">${g[d].c} orders • Sale: ${rs(g[d].s)}</div><div class="st">Cash: ${rs(g[d].cash)} • Udhar: ${rs(g[d].udhar)}</div><div class="st">Kharcha: ${rs(exp.filter(x=>x.t==d).reduce((q,x)=>q+x.a,0))}</div></div>`).join("")||'<div class="st">Abhi koi record nahi</div>'}`}
+const key=(n,s)=>n+"|"+s;
+const price=(n,s,b)=>(ov[key(n,s)]&&ov[key(n,s)].p)||b;
+const off=(n)=>ov[key(n,"*")]&&ov[key(n,"*")].off;
+const rs=n=>"Rs "+n.toLocaleString("en-PK");
+function V(v){view=v;R()}
+function add(n,s,p){try{navigator.vibrate(25)}catch(e){}const k=key(n,s);cart[k]=cart[k]||{n,s,p,q:0};cart[k].q++;R()}
+function chg(k,d){cart[k].q+=d;if(cart[k].q<=0)delete cart[k];R()}
+const total=()=>Object.values(cart).reduce((a,c)=>a+c.p*c.q,0);
+const cnt=()=>Object.values(cart).reduce((a,c)=>a+c.q,0);
+function R(){const ob=document.getElementById("ownb");if(ob)ob.style.display=OWN?"":"none";const cb=document.getElementById("ctrb");if(cb)cb.style.display=adm?"":"none";const a=document.getElementById("app");a.innerHTML=view=="menu"?menu():view=="cart"?cartV():view=="kitchen"?kitchen():view=="done"?doneV():view=="history"?histV():adminZ();
+const b=document.getElementById("bar");b.style.display=cnt()&&view=="menu"?"flex":"none";document.getElementById("tot").textContent=cnt()+" items • "+rs(total())}
+function menu(){let h='<nav>'+CATS.map(c=>`<button class="${c==cat?'':'g'}" onclick="cat='${c}';R()">${c}</button>`).join("")+'</nav><h2>'+cat+'</h2>';
+D.filter(d=>d[0]==cat).forEach(([c,n,pr])=>{const o=off(n);h+=`<div class="it ${o?'off':''}"><b>${n}${o?' <span class=tag>khatam</span>':''}</b><div class="row">`+Object.entries(pr).map(([s,p])=>{const q=price(n,s,p);return o?'':`<button class="g" onclick="add(\`${n}\`,'${s}',${q})">${s=="-"?"":s+" • "}${rs(q)} ＋</button>`}).join("")+'</div></div>'});return h}
+function cartV(){if(!cnt())return '<h2>Cart khali hai</h2><button onclick="V(\'menu\')">← Menu</button>';
+let h='<h2>Aapka Order</h2>'+Object.entries(cart).map(([k,c])=>`<div class="it"><b>${c.n} ${c.s=="-"?"":"("+c.s+")"}</b><div class="row"><button class="g" onclick="chg('${k.replace(/'/g,"\\'")}',-1)">−</button><b>${c.q}</b><button class="g" onclick="chg('${k.replace(/'/g,"\\'")}',1)">＋</button><span style="margin-left:auto">${rs(c.p*c.q)}</span></div></div>`).join("")+
+`<h2>Total: ${rs(total())}</h2>${adm?'<select id="ty"><option value="Dine-in">Dine-in</option><option value="Takeaway">Takeaway</option><option value="Delivery">Delivery</option></select>':''}
+<input id="nm" placeholder="Aapka naam"><input id="ph" placeholder="Phone number" inputmode="tel"><textarea id="ad" rows="2" placeholder="Delivery address (agar delivery chahiye)"></textarea><textarea id="nt" rows="1" placeholder="Note (e.g. kam mirch)"></textarea>
+<div class="row"><button class="g" onclick="V('menu')">← Menu</button><button onclick="place()">${adm?'Order save karein':'WhatsApp par order bhejein ✅'}</button></div>`;return h}
+function place(){const g=i=>(document.getElementById(i)||{}).value||"";
+const o={id:Date.now(),t:new Date().toLocaleString("en-GB"),nm:g("nm"),ph:g("ph"),ad:g("ad"),nt:g("nt"),ty:adm?g("ty"):"Online",items:Object.values(cart),tot:total(),st:"Naya",paid:adm&&(pm=="Cash"||pm=="Card")};
+if(!adm&&!o.nm){alert("Apna naam likhein");return}
+orders.unshift(o);sv("cd_orders",orders);sendOrder(o);if(!adm)sv("cd_last",o.items);
+const msg=`*Chef Dad - Naya Order*\n`+o.items.map(c=>`${c.q} x ${c.n} ${c.s=="-"?"":"("+c.s+")"} = ${c.p*c.q}`).join("\n")+`\n*Total: Rs ${o.tot}*\nNaam: ${o.nm}\nPhone: ${o.ph}\nAddress: ${o.ad}${f.loc?"\nLocation: "+f.loc:""}\nNote: ${o.nt}`;
+cart={};if(adm){view="admin";R();if(pp||st.ap)pr(o.id)}else{lastMsg=msg;lastId=o.id;view="done";R()}}
+function adminV(){if(!adm)return `<h2>Owner Login</h2><input id="pi" type="password" placeholder="PIN" inputmode="numeric"><div class="row"><button class="g" onclick="V('menu')">← Menu</button><button onclick="if(document.getElementById('pi').value==pin){adm=true;sv('cd_adm',true);OWN=true;sv('cd_own',true);R()}else alert('Ghalat PIN')">Login</button></div>`;
+const today=bd(Date.now());const to=orders.filter(o=>bd(o.id)==today&&o.st!="Cancel");
+const todaySale=to.reduce((a,o)=>a+o.tot,0),todayCash=to.filter(o=>o.paid).reduce((a,o)=>a+o.tot,0),udharAll=udTotal(),expToday=exp.filter(x=>x.t==today).reduce((a,x)=>a+x.a,0),expAll=exp.reduce((a,x)=>a+x.a,0);
+let h=`<!--T:aaj0--><h2>Dashboard</h2><div class="pn"><b>Aaj ki sale: ${rs(todaySale)}</b> <span class=tag>1 PM – 1 AM</span><div class="st">${to.length} orders • Aaj kul print nikle: ${prToday()} • Aakhri bill no: ${to.reduce((m,o)=>Math.max(m,o.bn||0),0)} • Kul orders: ${orders.length}</div><div class="row"><button onclick="view='cart';R()">＋ Counter order lein</button><button class="g" onclick="V('menu')">Menu</button><button class="g" onclick="view='history';R()">📅 Pichla Record</button><button class="g" onclick="adm=false;sv('cd_adm',false);V('menu')">Logout</button></div></div>${regH(today)}<!--T:zakat--><div class="pn"><b>🕌 Zakat (2.5% har sale par): ${rs(zk)}</b><div class="row"><button class="g" onclick="if(confirm('Zakat nikal di? Total reset ho jaye ga.')){zk=0;sv('cd_zk',0);R()}">Zakat nikal di ✅</button></div></div><!--T:kharcha-->${expH()}<!--T:udhar-->${udH()}<!--T:orders--><h2>Orders</h2>`;
+h+=ordFilterH()+orders.filter(ordPass).slice(0,30).map(o=>`<div class="pn"><b>Bill #${o.bn||String(o.id).slice(-5)} • ${o.ty} • ${rs(o.tot)}</b> <span class=tag>${o.st}</span> <span class=tag>${o.pm||""}</span> ${o.ch=="wa"?'<span class=tag>📱 WhatsApp</span>':o.ch=="online"?'<span class=tag>💻 Online</span>':''}<div class="st">${o.t} • ${o.nm} ${o.ph}</div><div>${o.items.map(c=>c.q+"× "+c.n+(c.s=="-"?"":" ("+c.s+")")).join(", ")}</div>${o.ad?'<div class="st">📍 '+o.ad+'</div>':''}<div class="row"><button onclick="pr(${o.id})">🖨️ Print</button><button class="g" onclick="kot(${o.id})">🍳 KOT</button><button class="g" onclick="pd(${o.id})">${o.paid?"Paid ✅":"Unpaid ❌"}</button>${["Tayyar","Delivered","Cancel"].map(s=>`<button class="g" onclick="setSt(${o.id},'${s}')">${s}</button>`).join("")}${o.ph?`<a href="https://wa.me/${o.ph.replace(/^0/,'92').replace(/\D/g,'')}"><button class="g">WhatsApp</button></a>`:''}<button class="g" onclick="delOrder(${o.id})">🗑️ Delete</button></div></div>`).join("")||'<div class="st">Abhi koi order nahi</div>';
+h+=`<!--T:menu--><h2>Menu & Rates</h2><div class="st">Rate badal kar bahar click karein; "Khatam" se item chhup jaye ga.</div>`+D.map(([c,n,pr])=>`<div class="pn"><b>${n}</b> <span class=tag>${c}</span> ${ph[n]?"✅":""} <label class="st" style="text-decoration:underline">📷 photo<input type="file" accept="image/*" style="display:none" onchange="up(\`${n}\`,this)"></label> <label class="st"><input type="checkbox" style="width:auto" ${off(n)?'checked':''} onchange="tg(\`${n}\`,this.checked)"> Khatam</label><div class="row">${Object.entries(pr).map(([s,p])=>`${s=="-"?"":s} <input class="p" type="number" value="${price(n,s,p)}" onchange="sp(\`${n}\`,'${s}',this.value)">`).join("")}</div></div>`).join("")+
+`<!--T:data1--><div class="pn"><b>PIN badlein</b><input id="np" placeholder="Naya PIN"><button onclick="pin=document.getElementById('np').value||pin;sv('cd_pin',pin);alert('PIN save')">Save</button></div>`;return h}
+function setSt(id,s){const o=orders.find(x=>x.id==id);o.st=s;sv("cd_orders",orders);if(okApi()&&st.key)api("action=status&id="+id+"&st="+encodeURIComponent(s)).catch(()=>{});R()}
+function delOrder(id){if(!confirm("Is order ko hamesha ke liye delete karna hai?"))return;orders=orders.filter(x=>x.id!=id);sv("cd_orders",orders);delIds.push(id);sv("cd_del",delIds);if(okApi()&&st.key)api("action=status&id="+id+"&st=Cancel").catch(()=>{});R()}
+function sp(n,s,v){ov[key(n,s)]={p:+v};sv("cd_ov",ov)}
+function tg(n,v){ov[key(n,"*")]={off:v};sv("cd_ov",ov)}
+let st=ld("cd_st",{dc:100,jc:"",ep:""}),ty="Delivery",pm="COD",f={};
+const esc=s=>(s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fee=()=>ty=="Delivery"?+st.dc:0;
+function cartV(){if(!cnt())return '<h2>Cart khali hai</h2><button onclick="V(\'menu\')">← Menu</button>';
+const types=adm||TB?["Dine-in","Takeaway","Delivery"]:["Delivery","Takeaway"];if(!types.includes(ty))ty=types[0];if(adm&&pm=="COD")pm="Cash";if(!adm&&(pm=="Cash"||pm=="Card"))pm="COD";
+const pi=pm=="JazzCash"&&st.jc?`JazzCash: ${esc(st.jc)}`:pm=="Easypaisa"&&st.ep?`Easypaisa: ${esc(st.ep)}`:"";
+return '<h2>Aapka Order</h2>'+Object.entries(cart).map(([k,c])=>{const q=k.replace(/'/g,"\\'");return `<div class="it"><b>${c.n} ${c.s=="-"?"":"("+c.s+")"}</b><div class="row"><button class="g" onclick="chg('${q}',-1)">−</button><b>${c.q}</b><button class="g" onclick="chg('${q}',1)">＋</button><span style="margin-left:auto">${rs(c.p*c.q)}</span></div></div>`}).join("")+
+`<div class="pn">Items: ${rs(total())}<br>Delivery: ${rs(fee())}${dsc()?`<br>Discount: −${rs(dsc())}`:""}<h2 style="margin:6px 0">Total: ${rs(total()+fee()-dsc())}</h2></div>${adm?`<input type="number" placeholder="Discount (Rs)" value="${f.dc||""}" oninput="f.dc=this.value" onchange="R()">`:""}
+<select onchange="ty=this.value;R()">${types.map(t=>`<option ${t==ty?"selected":""}>${t}</option>`).join("")}</select>
+<select onchange="pm=this.value;R()">${(adm?["Cash","JazzCash","Easypaisa","Card","Udhar"]:["COD","JazzCash","Easypaisa"]).map(t=>`<option ${t==pm?"selected":""}>${t}</option>`).join("")}</select>${pi?`<div class="st">${pi} — payment bhej kar screenshot WhatsApp par dein.</div>`:""}
+<input placeholder="Aapka naam" value="${esc(f.nm)}" oninput="f.nm=this.value"><input placeholder="Phone number" inputmode="tel" value="${esc(f.ph)}" oninput="f.ph=this.value">
+${ty=="Delivery"?`<textarea rows="2" placeholder="Delivery address" oninput="f.ad=this.value">${esc(f.ad)}</textarea><button class="g" onclick="getLoc()">📍 ${f.loc?"Location mil gayi ✅":"Meri location lagayein"}</button>`:""}<textarea rows="1" placeholder="Note (e.g. kam mirch)" oninput="f.nt=this.value">${esc(f.nt)}</textarea>
+<div class="row"><button class="g" onclick="V('menu')">← Menu</button>${adm?'<button onclick="place(0,1)">🖨️ Save + Print</button><button class="g" onclick="place()">Sirf save</button>':'<button onclick="place(\'wa\')">📱 WhatsApp se order bhejein</button><button onclick="place(\'online\')">💻 Online order karein</button>'}</div>`}
+function place(ch,pp){if(adm&&pm=="Udhar"&&!(f.nm||"").trim()){alert("Udhar ke liye customer ka naam zaroor likhein");return}if(!adm&&!st.open){alert("Dukan abhi band hai");return}if(!adm&&ty=="Delivery"&&total()<(+st.mo||0)){alert("Delivery ke liye kam az kam Rs "+st.mo+" ka order chahiye");return}if(!adm&&!f.nm){alert("Apna naam likhein");return}
+if(ty=="Delivery"&&!adm&&!f.ad){alert("Delivery address likhein");return}
+const fe=fee(),o={id:Date.now(),t:new Date().toLocaleString("en-GB"),nm:f.nm||"",ph:f.ph||"",ad:f.ad||"",nt:f.nt||"",ty:ty+(TB&&ty=="Dine-in"?" - Table "+TB:""),pm,items:Object.values(cart),fee:fe,disc:dsc(),tot:total()+fe-dsc(),st:"Naya",paid:adm&&(pm=="Cash"||pm=="Card"),ch:ch||"-",bn:nextBn()};
+orders.unshift(o);sv("cd_orders",orders);if(adm||ch=="online")sendOrder(o);if(!adm)sv("cd_last",o.items);
+zk+=o.tot*0.025;sv("cd_zk",zk);
+const msg=`*Chef Dad - Naya Order*\n`+o.items.map(c=>`${c.q} x ${c.n} ${c.s=="-"?"":"("+c.s+")"} = ${c.p*c.q}`).join("\n")+`\nDelivery: ${fe}${dsc()?"\nDiscount: -"+dsc():""}\n*Total: Rs ${o.tot}*\nType: ${o.ty}\nPayment: ${pm}\nNaam: ${o.nm}\nPhone: ${o.ph}\nAddress: ${o.ad}${f.loc?"\nLocation: "+f.loc:""}\nNote: ${o.nt}`;
+cart={};f={};if(adm){view="admin";R();if(pp||st.ap)pr(o.id)}else{lastMsg=msg;lastId=o.id;if(ch=="wa")window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(msg),'_blank');view="done";R()}}
+function kitchen(){const a=orders.filter(o=>o.st=="Naya");return `<h2>👨‍🍳 Kitchen (${a.length})</h2><div class="row"><button class="g" onclick="V('admin')">← Dashboard</button><button class="g" onclick="R()">Refresh</button></div>`+(a.map(o=>`<div class="pn" style="font-size:20px"><b>#${String(o.id).slice(-5)} • ${o.ty}</b><div>${o.items.map(c=>`<div>${c.q}× ${c.n} ${c.s=="-"?"":c.s}</div>`).join("")}</div>${o.nt?`<div class="st">📝 ${esc(o.nt)}</div>`:""}<button onclick="setSt(${o.id},'Tayyar')">Tayyar ✅</button> <button class="g" onclick="kot(${o.id})">🖨️ Slip</button></div>`).join("")||'<div class="st">Koi naya order nahi</div>')}
+let lastMsg="",lastId=0;
+function doneV(){const o=orders.find(x=>x.id==lastId)||{};return `<div class="pn" style="text-align:center"><h2>Order ho gaya \u2705</h2><div>Bill #${String(lastId).slice(-5)} \u2022 ${rs(o.tot||0)}</div><div class="st">Neeche se bill print karein aur/ya WhatsApp par order bhejein.</div></div><div class="row" style="justify-content:center"><button onclick="pr(${lastId})">\ud83d\udda8\ufe0f Bill print karein</button><button onclick="window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(lastMsg),'_blank')">WhatsApp par bhejein</button><button class="g" onclick="V('menu')">Naya order</button></div>`}
+function pd(id){const o=orders.find(x=>x.id==id);o.paid=!o.paid;sv("cd_orders",orders);R()}
+function pr(id){const o=orders.find(x=>x.id==id);if(!o)return;if(!o.bn){o.bn=nextBn();sv("cd_orders",orders)}prCount();
+document.getElementById("rc").style.width=(st.pw||72)+"mm";document.getElementById("rc").innerHTML=`<div style="text-align:center"><b style="font-size:18px">CHEF DAD</b><br>Pizza • Burger • Broast<br>Shah Sadar Din, D.G. Khan<br>0315 5921480</div><hr>${slipHead(o)}${o.nm?"<br>"+esc(o.nm):""}${o.ph?"<br>"+esc(o.ph):""}${o.ad?"<br>"+esc(o.ad):""}<hr><table>${o.items.map(c=>`<tr><td>${c.q}× ${esc(c.n)} ${c.s=="-"?"":c.s}</td><td style="text-align:right">${c.p*c.q}</td></tr>`).join("")}</table><hr><table><tr><td>Delivery</td><td style="text-align:right">${o.fee||0}</td></tr>${o.disc?`<tr><td>Discount</td><td style="text-align:right">-${o.disc}</td></tr>`:""}<tr><td><b>TOTAL</b></td><td style="text-align:right"><b>Rs ${o.tot}</b></td></tr></table>Payment: ${o.pm||"-"} (${o.paid?"PAID":"UNPAID"})<hr><div style="text-align:center">Shukriya! Dobara tashreef layein</div>`;
+if(st.kp!==false)document.getElementById("rc").innerHTML+='<div style="page-break-before:always;break-before:page"></div>'+kotH(o);setTimeout(()=>window.print(),100)}
+function adminX(){if(!adm)return adminV();return `<div class="row"><button onclick="V('kitchen')">👨‍🍳 Kitchen screen</button></div><div class="pn"><b>Settings</b><div class="st">Delivery charges (Rs)</div><input type="number" value="${st.dc}" onchange="st.dc=+this.value;sv('cd_st',st)"><div class="st">🔑 Online orders ka khufiya key (Google script wala)</div><input type="password" value="${esc(st.key||"")}" onchange="st.key=this.value;sv('cd_st',st);poll()"><div class="st">JazzCash number</div><input value="${esc(st.jc)}" onchange="st.jc=this.value;sv('cd_st',st)"><div class="st">Easypaisa number</div><input value="${esc(st.ep)}" onchange="st.ep=this.value;sv('cd_st',st)"></div>`+adminV()}
+const EM={Pizza:"🍕",Burger:"🍔",Broast:"🍗",Fries:"🍟",Wraps:"🌯",Paratha:"🫓",Appetizer:"🍢",Drinks:"🥤"};
+const PH0={};
+let q="",ph=Object.assign({},PH0,ld("cd_ph",{}));
+function card(n,pr,c){const o=off(n),p=ph[n];return `<div class="card ${o?"off":""}"><div class="img" style="${p?`background-image:url(${p})`:""}">${p?"":EM[c]}</div><div class="b"><h3>${n}${o?' <span class="tag">khatam</span>':""}</h3><div class="sz">${o?"":Object.entries(pr).map(([s,pp])=>{const x=price(n,s,pp);return `<button onclick="add(\`${n}\`,'${s}',${x})">${s=="-"?"Add":s} • ${rs(x)}</button>`}).join("")}</div></div></div>`}
+function list(){const t=q.trim().toLowerCase();const a=D.filter(d=>t?d[1].toLowerCase().includes(t):d[0]==cat);return '<div class="grid">'+(a.map(d=>card(d[1],d[2],d[0])).join("")||'<div class="st">Kuch nahi mila</div>')+"</div>"}
+function menu(){return `<nav>${CATS.map(c=>`<button class="${c==cat&&!q?"":"g"}" onclick="cat='${c}';q='';R()">${EM[c]} ${c}</button>`).join("")}</nav><input placeholder="🔍 Item dhoondein..." value="${esc(q)}" oninput="q=this.value;document.getElementById('list').innerHTML=list()"><h2>${q?"Search":EM[cat]+" "+cat}</h2><div id="list">${list()}</div>`}
+function up(n,el){const fl=el.files[0];if(!fl)return;const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const k=Math.min(1,480/Math.max(im.width,im.height)),c=document.createElement("canvas");c.width=im.width*k;c.height=im.height*k;c.getContext("2d").drawImage(im,0,0,c.width,c.height);ph[n]=c.toDataURL("image/jpeg",.7);sv("cd_ph",ph);R()};im.src=r.result};r.readAsDataURL(fl)}
+function exportSite(){fetch(location.href).then(r=>r.text()).then(html=>{let h2=html.replace(/const PH0=\{[\s\S]*?\};/,"const PH0="+JSON.stringify(ph)+";");h2=h2.replace(/const OV0=\{[\s\S]*?\};/,"const OV0="+JSON.stringify(ov)+";");dl("index.html",h2,"text/html")}).catch(()=>alert("Site fetch nahi ho saka, internet check karein"))}
+function doneV(){const o=orders.find(x=>x.id==lastId)||{items:[]};return `<div class="pn" style="text-align:center;border-color:var(--gold)"><div style="font-size:44px">✅</div><h2 style="margin:4px 0">Order mil gaya!</h2><div class="st">Bill #${o.bn||String(lastId).slice(-5)} • ${o.t||""}</div><hr style="border:0;border-top:1px dashed var(--bd)">${o.items.map(c=>`<div class="row" style="justify-content:space-between;margin:4px 0"><span>${c.q}× ${esc(c.n)} ${c.s=="-"?"":c.s}</span><b>${rs(c.p*c.q)}</b></div>`).join("")}<div class="row" style="justify-content:space-between"><span>Delivery</span><b>${rs(o.fee||0)}</b></div><h2 style="margin:8px 0">Total ${rs(o.tot||0)}</h2><div class="st">${o.ty} • ${o.pm}</div><div class="st">⏱️ Taqreeban ${esc(st.eta)}</div>${o.ch=="wa"?'<div class="st">Aapka order WhatsApp par bhej diya gaya hai.</div>':o.ch=="online"?'<div class="st">Aapka order online dukan ko bhej diya gaya hai.</div>':""}</div><div class="row" style="justify-content:center">${OWN||adm?`<button onclick="pr(${lastId})">🖨️ Bill print</button>`:""}${o.ch=="wa"?`<button onclick="window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(lastMsg),'_blank')">💬 WhatsApp dobara kholein</button>`:""}<button class="g" onclick="V('menu')">Naya order</button></div>`}
+st=Object.assign({open:true,deal:"",mo:0,pw:72,ap:false},st);
+const ART={Pizza:'<circle cx="50" cy="50" r="42" fill="#e9a84e"/><circle cx="50" cy="50" r="35" fill="#ffd45a"/><circle cx="36" cy="40" r="7" fill="#d63a2a"/><circle cx="60" cy="38" r="7" fill="#d63a2a"/><circle cx="52" cy="60" r="7" fill="#d63a2a"/><circle cx="34" cy="62" r="5" fill="#3a8f3a"/><circle cx="68" cy="58" r="5" fill="#3a8f3a"/>',
+Burger:'<path d="M12 46a38 30 0 0 1 76 0z" fill="#e8a24a"/><path d="M10 50q10 8 20 0t20 0t20 0t20 0v6H10z" fill="#4caf50"/><path d="M14 56h72l-10 9-9-9z" fill="#ffc83d"/><rect x="12" y="58" width="76" height="12" rx="6" fill="#6b3a1f"/><path d="M12 72h76a10 10 0 0 1-10 14H22a10 10 0 0 1-10-14z" fill="#e8a24a"/>',
+Broast:'<ellipse cx="42" cy="42" rx="28" ry="22" fill="#c8732a" transform="rotate(-35 42 42)"/><rect x="58" y="60" width="9" height="26" rx="4" fill="#f4e9d8" transform="rotate(-35 62 73)"/><circle cx="74" cy="84" r="6" fill="#f4e9d8"/>',
+Fries:'<rect x="28" y="16" width="9" height="40" rx="3" fill="#ffd34d"/><rect x="38" y="10" width="9" height="46" rx="3" fill="#ffc21f"/><rect x="48" y="18" width="9" height="38" rx="3" fill="#ffd34d"/><rect x="58" y="12" width="9" height="44" rx="3" fill="#ffc21f"/><rect x="68" y="20" width="9" height="36" rx="3" fill="#ffd34d"/><path d="M22 50h56l-6 40H28z" fill="#e8431a"/>',
+Wraps:'<rect x="12" y="34" width="76" height="34" rx="17" fill="#f1d9a8"/><path d="M24 44h52M24 58h52" stroke="#d8b56f" stroke-width="3"/><circle cx="84" cy="51" r="10" fill="#4caf50"/><circle cx="84" cy="51" r="5" fill="#d63a2a"/>',
+Paratha:'<circle cx="50" cy="50" r="40" fill="#e2a64d"/><path d="M20 50h60M28 34h44M28 66h44" stroke="#c9822b" stroke-width="3" stroke-linecap="round"/>',
+Appetizer:'<rect x="12" y="38" width="36" height="30" rx="13" fill="#d28b34"/><rect x="48" y="26" width="36" height="30" rx="13" fill="#e0a145"/><rect x="38" y="58" width="36" height="28" rx="13" fill="#c97a28"/>',
+Drinks:'<path d="M52 24l10-18" stroke="#333" stroke-width="4"/><path d="M30 32h40l-5 54H35z" fill="#e8431a"/><rect x="26" y="26" width="48" height="8" rx="3" fill="#fff" stroke="#ddd"/><rect x="38" y="48" width="24" height="16" rx="3" fill="#fff"/>'};
+const art=c=>`<svg viewBox="0 0 100 100" width="92" height="92">${ART[c]||""}</svg>`;
+let HOT=[];
+const hot=()=>{const m={};orders.forEach(o=>o.st!="Cancel"&&o.items.forEach(c=>m[c.n]=(m[c.n]||0)+c.q));return Object.entries(m).filter(e=>e[1]>=3).sort((a,b)=>b[1]-a[1]).slice(0,3).map(e=>e[0])};
+function card(n,pr,c){const o=off(n),p=ph[n];return `<div class="card ${o?"off":""}"><div class="img" style="${p?`background-image:url(${p})`:""}">${p?"":art(c)}${HOT.includes(n)?'<span class="hot">🔥 Popular</span>':""}</div><div class="b"><h3>${n}${o?' <span class="tag">khatam</span>':""}</h3><div class="sz">${o?"":Object.entries(pr).map(([s,pp])=>{const x=price(n,s,pp);return `<button onclick="add(\`${n}\`,'${s}',${x})">${s=="-"?"Add":s} • ${rs(x)}</button>`}).join("")}</div></div></div>`}
+function list(){HOT=hot();const t=q.trim().toLowerCase();const a=D.filter(d=>t?d[1].toLowerCase().includes(t):d[0]==cat);return '<div class="grid">'+(a.map(d=>card(d[1],d[2],d[0])).join("")||'<div class="st">Kuch nahi mila</div>')+"</div>"}
+function menu(){return `${st.open?"":'<div class="pn" style="background:#fee;border-color:#f99">🔴 Dukan abhi band hai, orders band hain.</div>'}${st.deal?`<div class="deal">🎉 ${esc(st.deal)}</div>`:""}<nav>${CATS.map(c=>`<button class="${c==cat&&!q?"":"g"}" onclick="cat='${c}';q='';R()">${EM[c]} ${c}</button>`).join("")}</nav><input placeholder="🔍 Item dhoondein..." value="${esc(q)}" oninput="q=this.value;document.getElementById('list').innerHTML=list()"><h2>${q?"Search":EM[cat]+" "+cat}</h2><div id="list">${list()}</div>`}
+const dsc=()=>adm?Math.min(+f.dc||0,total()):0;
+function kot(id){const o=orders.find(x=>x.id==id);if(!o)return;const r=document.getElementById("rc");r.style.width=(st.pw||72)+"mm";r.innerHTML=`<div style="text-align:center"><b style="font-size:16px">KITCHEN SLIP</b></div>#${o.bn||String(o.id).slice(-5)} \u2022 ${o.ty}<br>${o.t}<hr><div style="font-size:15px">${o.items.map(c=>`<div><b>${c.q}\u00d7</b> ${esc(c.n)} ${c.s=="-"?"":c.s}</div>`).join("")}</div>${o.nt?`<hr>Note: ${esc(o.nt)}`:""}`;setTimeout(()=>window.print(),100)}
+const dl=(n,t,m)=>{const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([t],{type:m}));a.download=n;a.click()};
+function csv(){const e=v=>'"'+String(v==null?"":v).replace(/"/g,'""')+'"';dl("chef-dad-orders.csv","\ufeff"+["Bill,Date,Type,Name,Phone,Payment,Paid,Status,Items,Total"].concat(orders.map(o=>[String(o.id).slice(-5),o.t,o.ty,o.nm,o.ph,o.pm,o.paid?"Yes":"No",o.st,o.items.map(c=>c.q+"x "+c.n+" "+(c.s=="-"?"":c.s)).join("; "),o.tot].map(e).join(","))).join("\n"),"text/csv")}
+function bk(){const d={};Object.keys(localStorage).filter(k=>k.startsWith("cd_")).forEach(k=>d[k]=localStorage.getItem(k));dl("chef-dad-backup.json",JSON.stringify(d),"application/json")}
+function rst(el){const fl=el.files[0];if(!fl)return;const r=new FileReader();r.onload=()=>{try{const d=JSON.parse(r.result);Object.keys(d).forEach(k=>k.startsWith("cd_")&&localStorage.setItem(k,d[k]));alert("Restore ho gaya");location.reload()}catch(e){alert("Ghalat file")}};r.readAsText(fl)}
+function adminX(){if(!adm)return adminV();const sm=a=>a.reduce((x,o)=>x+o.tot,0),inR=d=>orders.filter(o=>o.st!="Cancel"&&Date.now()-o.id<d*864e5),m={},p={};
+inR(30).forEach(o=>{o.items.forEach(c=>m[c.n]=(m[c.n]||0)+c.q);p[o.pm||"-"]=(p[o.pm||"-"]||0)+o.tot});
+const top=Object.entries(m).sort((a,b)=>b[1]-a[1]).slice(0,5),sv2=k=>`onchange="st.${k}=this.value;sv('cd_st',st)"`,ck=(k,l)=>`<label class="st"><input type="checkbox" style="width:auto" ${st[k]?"checked":""} onchange="st.${k}=this.checked;sv('cd_st',st)"> ${l}</label>`;
+return `<!--T:aaj1--><div class="row"><button onclick="V('kitchen')">\ud83d\udc68\u200d\ud83c\udf73 Kitchen screen</button><button class="g" onclick="V('menu')">Menu dekhein</button></div>
+<!--T:report--><div class="pn"><b>\ud83d\udcca Sales report</b><table>${[["Pichle 24 ghante",1],["Pichle 7 din",7],["Pichle 30 din",30]].map(([l,d])=>`<tr><td>${l}</td><td>${inR(d).length} orders</td><td align="right"><b>${rs(sm(inR(d)))}</b></td></tr>`).join("")}</table><div class="st">\ud83d\udd25 Top items (30 din): ${top.map(t=>t[0]+" \u00d7"+t[1]).join(" \u2022 ")||"-"}</div><div class="st">\ud83d\udcb3 Payment: ${Object.entries(p).map(e=>e[0]+" "+rs(e[1])).join(" \u2022 ")||"-"}</div></div>
+<!--T:setting0--><div class="pn"><b>\u2699\ufe0f Settings</b>${ck("open","Dukan khuli hai (band hone par online orders nahi lagte)")}<div class="st">Offer / deal ka message (menu ke upar dikhta hai)</div><input value="${esc(st.deal)}" ${sv2("deal")}><div class="st">Delivery charges (Rs)</div><input type="number" value="${st.dc}" onchange="st.dc=+this.value;sv('cd_st',st)"><div class="st">Order ka andazan waqt (e.g. 30-40 min)</div><input value="${esc(st.eta)}" onchange="st.eta=this.value;sv('cd_st',st)"><div class="st">Delivery ke liye kam az kam order (Rs)</div><input type="number" value="${st.mo||0}" onchange="st.mo=+this.value;sv('cd_st',st)"><div class="st">🔑 Online orders ka khufiya key (Google script wala)</div><input type="password" value="${esc(st.key||"")}" onchange="st.key=this.value;sv('cd_st',st);poll()"><div class="st">JazzCash number</div><input value="${esc(st.jc)}" ${sv2("jc")}><div class="st">Easypaisa number</div><input value="${esc(st.ep)}" ${sv2("ep")}><div class="st">Bill printer ka size</div><select onchange="st.pw=+this.value;sv('cd_st',st)"><option value="72" ${st.pw==72?"selected":""}>80mm printer</option><option value="48" ${st.pw==48?"selected":""}>58mm printer</option><option value="90" ${st.pw==90?"selected":""}>90mm printer</option></select><div class="st">Ya apna size (mm) khud likhein, jaise 90</div><input type="number" value="${st.pw||72}" onchange="st.pw=+this.value;sv('cd_st',st)"><div class="st">Print scale % (100 normal, 90 chhota)</div><input type="number" value="${st.ps||100}" onchange="st.ps=+this.value||100;sv('cd_st',st)">${ck("aop","Naya online order aane par bill + slip khud print karein")}${ck("kp","Bill ke saath kitchen slip bhi print karein (2 print nikalengi)")}${ck("ap","Counter order save hote hi bill khud print karein")}</div>
+<!--T:data0--><div class="pn"><b>\ud83d\udcbe Data</b><div class="row"><button class="g" onclick="csv()">Orders (Excel/CSV)</button><button class="g" onclick="exportSite()">📤 Photos/rates sahit site export karein</button><button class="g" onclick="OWN=false;sv('cd_own',false);adm=false;sv('cd_adm',false);V('menu')">Is device se owner hatayein</button><button class="g" onclick="bk()">Backup lein</button><label class="st">Restore: <input type="file" accept=".json" onchange="rst(this)"></label></div></div>`+adminV()}
+st=Object.assign({kp:true},st);
+const kotH=o=>`<div style="text-align:center"><b style="font-size:18px">KITCHEN SLIP</b></div>${slipHead(o)}${o.nm?"<br>"+esc(o.nm):""}<hr><div style="font-size:16px">${o.items.map(c=>`<div><b>${c.q}\u00d7</b> ${esc(c.n)} ${c.s=="-"?"":c.s}</div>`).join("")}</div>${o.nt?`<hr>Note: ${esc(o.nt)}`:""}`;
+function kot(id){const o=orders.find(x=>x.id==id);if(!o)return;const r=document.getElementById("rc");r.style.width=(st.pw||72)+"mm";r.innerHTML=kotH(o);setTimeout(()=>window.print(),100)}
+st=Object.assign({eta:"30-40 min"},st);
+const TB=new URLSearchParams(location.search).get("table");if(TB)ty="Dine-in";
+document.documentElement.dataset.theme=ld("cd_th","light");
+function tm(){const d=document.documentElement.dataset;d.theme=d.theme=="dark"?"light":"dark";sv("cd_th",d.theme)}
+let FV=ld("cd_fav",[]),deals=ld("cd_deals",[
+{n:"Deal 1",p:490,d:"1 Zinger Burger + 1 Regular Fries + 1 300ml Drink"},
+{n:"Deal 2",p:950,d:"2 Zinger Burger + 1 Regular Fries + 2 300ml Drink"},
+{n:"Deal 3",p:800,d:"1 Zinger Burger + 1 Loaded Fries (M) + 1 500ml Drink"},
+{n:"Deal 4",p:1180,d:"4 Chicken Shawarma + 1 1.5L Drink"},
+{n:"Deal 5",p:800,d:"1 Zinger Burger + 1 Chicken Shawarma + 1 Regular Fries + 2 300ml Drink"},
+{n:"Deal 6",p:1350,d:"2 Zinger Burger + 10 Pcs Fat Wings + 2 300ml Drink"},
+{n:"Deal 7",p:600,d:"1 Zinger Wrap + 1 Regular Fries + 1 300ml Drink"},
+{n:"Deal 8",p:950,d:"1 Zinger Burger + 1 Small Pizza + 1 500ml Drink"},
+{n:"Deal 9",p:999,d:"2 Small Pizza + 1 500ml Drink"},
+{n:"Deal 10",p:1650,d:"1 Small Pizza + 1 Medium Pizza + 2 500ml Drink"},
+{n:"Deal 11",p:2150,d:"2 Medium Pizza + 1 1.5L Drink"},
+{n:"Deal 12",p:950,d:"1 Small Pizza + 5 Pcs Fat Wings + 1 Regular Fries + 1 500ml Drink"},
+{n:"Deal 13",p:2050,d:"1 Large Pizza + 10 Pcs Fat Wings + 1 1.5L Drink"},
+{n:"Deal 14",p:2800,d:"2 Large Pizza + 1 1.5L Drink"}
+]);EM.Deals="🎁";EM.Fav="❤️";
+function fv(n){FV=FV.includes(n)?FV.filter(x=>x!=n):[...FV,n];sv("cd_fav",FV);document.getElementById("list").innerHTML=list()}
+function getLoc(){navigator.geolocation.getCurrentPosition(p=>{f.loc="https://maps.google.com/?q="+p.coords.latitude+","+p.coords.longitude;R()},()=>alert("Location allow karein ya address likh dein"))}
+function again(){const it=ld("cd_last",[]);cart={};it.forEach(c=>cart[key(c.n,c.s)]={n:c.n,s:c.s,p:price(c.n,c.s,c.p),q:c.q});V("cart")}
+function card(n,pr,c){const o=off(n),p=ph[n];return `<div class="card ${o?"off":""}"><div class="img" style="${p?`background-image:url(${p})`:""}">${p?"":art(c)}${HOT.includes(n)?'<span class="hot">🔥 Popular</span>':""}<button class="fv" onclick="fv(\`${n}\`)">${FV.includes(n)?"❤️":"🤍"}</button></div><div class="b"><h3>${n}${o?' <span class="tag">khatam</span>':""}</h3><div class="sz">${o?"":Object.entries(pr).map(([s,pp])=>{const x=price(n,s,pp);return `<button onclick="add(\`${n}\`,'${s}',${x})"><small>${s=="-"?"Add":s}</small> <b>Rs ${x}</b> ＋</button>`}).join("")}</div></div></div>`}
+function dcard(d){return `<div class="card"><div class="img"><svg viewBox="0 0 100 100" width="92" height="92"><text x="50" y="68" font-size="64" text-anchor="middle">🎁</text></svg><span class="hot">DEAL</span></div><div class="b"><h3>${esc(d.n)}</h3><div class="st dl" style="margin-bottom:8px">${esc(d.d).split("+").map(x=>x.trim()).filter(Boolean).map(x=>"• "+x).join("<br>")}</div><div class="sz"><button onclick="add(\`${esc(d.n)}\`,'-',${d.p})"><small>Add</small> <b>Rs ${d.p}</b> ＋</button></div></div></div>`}
+function list(){HOT=hot();const t=q.trim().toLowerCase();let a;if(!t&&cat=="Deals")return '<div class="grid">'+deals.filter(d=>!d.off).map(dcard).join("")+"</div>";a=D.filter(d=>t?d[1].toLowerCase().includes(t):cat=="Fav"?FV.includes(d[1]):d[0]==cat);return '<div class="grid">'+(a.map(d=>card(d[1],d[2],d[0])).join("")||'<div class="st">Kuch nahi mila. Dil ❤️ dabakar pasandeeda items chunein.</div>')+"</div>"}
+function menu(){if(cat=="Deals"&&!deals.some(d=>!d.off))cat="Pizza";const cs=[...(deals.some(d=>!d.off)?["Deals"]:[]),...(FV.length?["Fav"]:[]),...CATS];return `${st.open?"":'<div class="pn" style="background:#fee;border-color:#f99;color:#900">🔴 Dukan abhi band hai, orders band hain.</div>'}${TB?`<div class="deal">🪑 Table ${esc(TB)} \u2022 aap ka order seedha is table par aaye ga</div>`:""}${st.deal?`<div class="deal">🎉 ${esc(st.deal)}</div>`:""}<div class="row" style="margin:8px 0"><span class="tag">⏱️ ${esc(st.eta)}</span>${ld("cd_last",[]).length?'<button class="g" onclick="again()">🔁 Pichla order dobara</button>':""}</div><nav>${cs.map(c=>`<button class="${c==cat&&!q?"":"g"}" onclick="cat='${c}';q='';R()">${EM[c]} ${c=="Fav"?"Favourite":c}</button>`).join("")}</nav><input placeholder="🔍 Item dhoondein..." value="${esc(q)}" oninput="q=this.value;document.getElementById('list').innerHTML=list()"><h2>${q?"Search":EM[cat]+" "+(cat=="Fav"?"Favourite":cat)}</h2><div id="list">${list()}</div>`}
+function addDeal(){const g=i=>document.getElementById(i).value.trim();if(!g("dn")||!+g("dp")){alert("Naam aur rate likhein");return}deals.push({n:g("dn"),p:+g("dp"),d:g("dd")});sv("cd_deals",deals);R()}
+function delDeal(i){if(!confirm("Ye deal hata dein?"))return;deals.splice(i,1);sv("cd_deals",deals);R()}
+let dEdit=-1;
+function dealsH(){return `<div class="pn"><b>🎁 Naya Deal banayein</b><div class="st">Jo deal banayenge woh menu ke "Deals" tab mein customer ko nazar aaye gi.</div><input id="dn" placeholder="Deal ka naam (e.g. Family Deal)"><input id="dp" type="number" inputmode="numeric" placeholder="Rate (Rs)"><input id="dd" placeholder="Is mein kya kya hai (e.g. 2 Medium Pizza + 1.5L Drink)"><button onclick="addDeal()">＋ Deal shamil karein</button></div><h2>Deals (${deals.length})</h2>`+(deals.map((d,i)=>dEdit===i?`<div class="pn"><b>✏️ Deal edit</b><input id="dn2" value="${esc(d.n)}"><input id="dp2" type="number" inputmode="numeric" value="${d.p}"><input id="dd2" value="${esc(d.d)}"><div class="row"><button onclick="saveDeal(${i})">Save</button><button class="g" onclick="dEdit=-1;R()">Cancel</button></div></div>`:`<div class="it ${d.off?"off":""}"><b>${esc(d.n)} <span style="float:right">${rs(d.p)}</span></b>${d.off?'<span class="tag">band (customer ko nahi dikhti)</span>':""}<div class="st">${esc(d.d)}</div><div class="row"><button class="g" onclick="dEdit=${i};R()">✏️ Edit</button><button class="g" onclick="togDeal(${i})">${d.off?"Chalu karein":"Khatam"}</button><button class="g" onclick="mvDeal(${i},-1)">↑</button><button class="g" onclick="mvDeal(${i},1)">↓</button><button class="g" onclick="dupDeal(${i})">Copy</button><button class="g" onclick="delDeal(${i})">🗑️</button></div></div>`).join("")||'<div class="st">Abhi koi deal nahi</div>')}
+function saveDeal(i){const g=x=>document.getElementById(x).value.trim();if(!g("dn2")||!+g("dp2")){alert("Naam aur rate likhein");return}deals[i]=Object.assign({},deals[i],{n:g("dn2"),p:+g("dp2"),d:g("dd2")});sv("cd_deals",deals);dEdit=-1;R()}
+function togDeal(i){deals[i].off=!deals[i].off;sv("cd_deals",deals);R()}
+function mvDeal(i,d){const j=i+d;if(j<0||j>=deals.length)return;[deals[i],deals[j]]=[deals[j],deals[i]];sv("cd_deals",deals);R()}
+function dupDeal(i){deals.splice(i+1,0,Object.assign({},deals[i],{n:deals[i].n+" (copy)"}));sv("cd_deals",deals);R()}
+function adminZ(){return adminX()}
+let OWN=ld("cd_own",false),taps=0;
+function lg(){}
+if(location.hash=="#owner")view="admin";
+if(typeof addEventListener=="function")addEventListener("hashchange",()=>{if(location.hash=="#owner")V("admin")});
+const API="https://script.google.com/macros/s/AKfycbySh9tyqUxjV2gpHXEBSk80Pof1U2TcLtz6l73cbwOYbHRVp_mcDLU6jK6NYtG5HNKzFA/exec";
+const okApi=()=>/^https:\/\/script\.google\.com\//.test(API);
+function sendOrder(o){if(!okApi())return;try{fetch(API,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain"},body:JSON.stringify(o)}).catch(()=>{})}catch(e){}}
+function api(q){return fetch(API+"?"+q+"&key="+encodeURIComponent(st.key||"")).then(r=>r.json())}
+function beep(){try{const c=new(window.AudioContext||window.webkitAudioContext)(),o=c.createOscillator();o.connect(c.destination);o.frequency.value=880;o.start();setTimeout(()=>o.stop(),500)}catch(e){}}
+async function poll(){if(!adm||!okApi()||!st.key)return;try{const d=await api("action=list");if(!d.orders)return;const nw=[];d.orders.forEach(c=>{if(delIds.includes(c.id))return;const l=orders.find(x=>x.id==c.id);if(!l){orders.unshift(c);nw.push(c)}else if(l.st!=c.st){const PRI={Naya:0,Tayyar:1,Delivered:2,Cancel:3};if((PRI[c.st]||0)>(PRI[l.st]||0))l.st=c.st}});if(nw.length){orders.sort((a,b)=>b.id-a.id);sv("cd_orders",orders);beep();R();if(st.aop)nw.forEach((o,i)=>setTimeout(()=>pr(o.id),i*2000))}}catch(e){}}
+setInterval(poll,15000);poll();document.addEventListener('visibilitychange',()=>{if(!document.hidden)poll()});
+/* ===== v2: business day, bill no, calculator, kharcha, udhar ===== */
+const bd=ts=>new Date(ts-36e5).toLocaleDateString("en-GB");
+function prCount(){const d=bd(Date.now());let c=ld("cd_pc",{d:"",n:0});if(c.d!=d)c={d,n:0};c.n++;sv("cd_pc",c);return c.n}
+const prToday=()=>{const c=ld("cd_pc",{d:"",n:0});return c.d==bd(Date.now())?c.n:0};
+function nextBn(){const d=bd(Date.now());let c=ld("cd_bn",{d:"",n:0});if(c.d!=d)c={d,n:0};c.n++;sv("cd_bn",c);return c.n}
+const XC=["Naan","Dahi","Maida","Ghee","Milk","Thoom","Takiyaan","Sabun (Safai)","Rozana Kiraya","Other"],XE={Naan:"🫓",Dahi:"🥛",Maida:"🌾",Ghee:"🧈",Milk:"🥛",Thoom:"🧄",Takiyaan:"🍢","Sabun (Safai)":"🧼","Rozana Kiraya":"🏠",Other:"🧾",Gosht:"🥩",Petrol:"⛽",Sabzi:"🥬"};
+function expH(){const today=bd(Date.now()),te=exp.filter(x=>x.t==today),sm=(a,c)=>a.filter(x=>!c||x.d==c).reduce((q,x)=>q+x.a,0),
+cats=[...XC,...[...new Set(exp.map(x=>x.d))].filter(d=>!XC.includes(d))],
+sale=orders.filter(o=>bd(o.id)==today&&o.st!="Cancel").reduce((q,o)=>q+o.tot,0),
+li=x=>`<div class="st">${x.t} • ${XE[x.d]||"🧾"} ${esc(x.d)}${x.n?" • "+esc(x.n):""} • <b>${rs(x.a)}</b> <button class="g" onclick="delExp(${x.id})">🗑️</button></div>`;
+return `<div class="pn"><b>💸 Kharcha (Expenses)</b><div class="row"><select id="ec" style="flex:1">${XC.map(c=>`<option>${c}</option>`).join("")}</select><input id="ea" type="number" inputmode="numeric" placeholder="Amount" style="flex:1"></div><input id="ed" placeholder="Tafseel (optional) e.g. 5 kg boti"><button onclick="addExp()">＋ Kharcha shamil karein</button>
+<table style="margin-top:8px"><tr><td><b>Category</b></td><td align="right"><b>Aaj</b></td><td align="right"><b>Kul</b></td></tr>${cats.map(c=>`<tr><td>${XE[c]||"🧾"} ${esc(c)}</td><td align="right">${rs(sm(te,c))}</td><td align="right">${rs(sm(exp,c))}</td></tr>`).join("")}<tr><td><b>Total</b></td><td align="right"><b>${rs(sm(te))}</b></td><td align="right"><b>${rs(sm(exp))}</b></td></tr></table>
+<div class="st">Aaj: Sale ${rs(sale)} − Kharcha ${rs(sm(te))} = <b>${rs(sale-sm(te))}</b></div>
+<div class="st" style="margin-top:6px"><b>Aakhri entries:</b></div>${exp.slice(0,15).map(li).join("")||'<div class="st">Koi kharcha darj nahi</div>'}</div>`}
+let ud=ld("cd_ud",[]),udOpen="",udKeys=[];
+const un=s=>(s||"").trim().toLowerCase();
+function udRows(){const m={},g=n=>{const k=un(n)||"(naam nahi)";return m[k]=m[k]||{nm:(n||"").trim()||"(naam nahi)",deb:0,cr:0,ent:[]}};
+orders.filter(o=>o.pm=="Udhar"&&!o.paid&&o.st!="Cancel").forEach(o=>{const r=g(o.nm);r.deb+=o.tot;r.ent.push({id:o.id,t:bd(o.id),k:"d",a:o.tot,n:"Order"+(o.bn?" #"+o.bn:""),ord:1})});
+ud.forEach(e=>{const r=g(e.nm);if(e.k=="d")r.deb+=e.a;else r.cr+=e.a;r.ent.push(e)});return m}
+const udTotal=()=>Object.values(udRows()).reduce((q,r)=>q+Math.max(0,r.deb-r.cr),0);
+function udH(){const m=udRows(),rows=Object.entries(m).map(([k,r])=>Object.assign({k,b:r.deb-r.cr},r)).sort((a,b)=>b.b-a.b).filter(r=>Math.abs(r.b)>0.5);udKeys=rows.map(r=>r.k);
+return `<div class="pn"><b>📒 Udhar Khata</b><div class="st">Kul baqaya: <b>${rs(udTotal())}</b> • ${rows.filter(r=>r.b>0).length} customers</div><div class="st">✅ Jis ka poora udhar wasool ho jaye, woh list se khud hat jata hai (${Object.keys(m).length-rows.length} customers ka hisab chukta).</div><div class="st">Counter order mein payment "Udhar" chunein to order khud customer ke naam par likh jaye ga.</div>
+<div class="row"><input id="un" placeholder="Customer ka naam" style="flex:1"><input id="ua" type="number" inputmode="numeric" placeholder="Amount" style="flex:1"></div><input id="uno" placeholder="Note (optional)"><div class="row"><button onclick="addUd('d')">＋ Udhar likhein</button><button class="g" onclick="addUd('c')">💵 Wasooli (jama)</button></div>
+${rows.map((r,i)=>`<div class="it"><b>${esc(r.nm)} <span style="float:right">${rs(r.b)}</span></b><div class="st">Udhar ${rs(r.deb)} • Wasool ${rs(r.cr)}</div><div class="row"><button class="g" onclick="payUd(${i})">💵 Wasooli</button><button class="g" onclick="udOpen=udOpen==='${i}'?'':'${i}';R()">📜 Tafseel</button></div>${udOpen===String(i)?r.ent.sort((a,b)=>b.id-a.id).map(e=>`<div class="st">${e.t} • ${e.k=="d"?"Udhar":"Wasooli"} <b>${rs(e.a)}</b>${e.n?" • "+esc(e.n):""}${e.ord?"":` <button class="g" onclick="delUd(${e.id})">🗑️</button>`}</div>`).join(""):""}</div>`).join("")||'<div class="st">Koi udhar nahi</div>'}</div>`}
+function addUd(k){const g=i=>document.getElementById(i).value.trim(),nm=g("un"),a=+g("ua");if(!nm||!a||a<=0){alert("Naam aur amount likhein");return}ud.unshift({id:Date.now(),t:bd(Date.now()),nm,a,k,n:g("uno")});sv("cd_ud",ud);R()}
+function payUd(i){const r=udRows()[udKeys[i]];if(!r)return;const a=+prompt(r.nm+" ka baqaya "+(r.deb-r.cr)+". Kitni raqam wasool hui?");if(!a||a<=0)return;ud.unshift({id:Date.now(),t:bd(Date.now()),nm:r.nm,a,k:"c",n:""});sv("cd_ud",ud);R()}
+function delUd(id){if(!confirm("Ye entry hata dein?"))return;ud=ud.filter(x=>x.id!=id);sv("cd_ud",ud);R()}
+let cx="",cgv="";
+const CK=[["C","C"],["⌫","B"],["÷","/"],["×","*"],["7"],["8"],["9"],["−","-"],["4"],["5"],["6"],["+","+"],["1"],["2"],["3"],["=","="],["0"],["00"],["."],["Total","T"]];
+const cf=x=>x.replace(/\*/g,"×").replace(/\//g,"÷")||"0";
+function cbT(){const g=+cgv,t=total()+fee()-dsc();return g?(g>=t?"Wapsi: "+rs(g-t):"Kam: "+rs(t-g)):""}
+function calcH(){return `<div class="pn"><b>🧮 Calculator</b><div id="cdisp" style="font:700 26px monospace;text-align:right;min-height:40px;padding:6px 10px;border:1px solid var(--bd);border-radius:10px;margin:6px 0;overflow-x:auto">${cf(cx)}</div><div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px">${CK.map(k=>`<button class="${/^[0-9.]/.test(k[0])?"g":""}" style="padding:12px 0;font-size:18px" onclick="cc('${k[1]||k[0]}')">${k[0]}</button>`).join("")}</div><div class="st" style="margin-top:8px">Customer ne diye → wapsi:</div><div class="row"><input type="number" inputmode="numeric" placeholder="Customer ne kitne diye" value="${esc(cgv)}" oninput="cgv=this.value;document.getElementById('cbk').textContent=cbT()" style="flex:1"><b id="cbk">${cbT()}</b></div></div>`}
+function cc(k){if(k=="C")cx="";else if(k=="B")cx=cx.slice(0,-1);else if(k=="T"){if(!cx||/[+\-*\/(]$/.test(cx))cx+=String(total()+fee()-dsc())}else if(k=="="){try{if(/^[0-9+\-*\/.() ]+$/.test(cx)){const r=Function('"use strict";return ('+cx+')')();if(isFinite(r))cx=String(Math.round(r*100)/100)}}catch(e){}}else cx+=k;const d=document.getElementById("cdisp");if(d)d.textContent=cf(cx)}
+{const _c0=cartV;cartV=function(){return (adm?calcH():"")+_c0()}}
+
+/* ===== v3: roznamcha (daily register), floating calculator ===== */
+const dk=d=>d.split("/").reverse().join("");
+const opn=ld("cd_open",{});
+function setOpen(d,v){opn[d]=+v||0;sv("cd_open",opn);R()}
+function allDays(){const m={};orders.forEach(o=>{if(o.st!="Cancel")m[bd(o.id)]=1});exp.forEach(x=>m[x.t]=1);ud.forEach(x=>m[x.t]=1);Object.keys(opn).forEach(d=>m[d]=1);return Object.keys(m).sort((a,b)=>dk(a)<dk(b)?-1:1)}
+function dayStat(d,memo){memo=memo||{};if(memo[d])return memo[d];
+const os=orders.filter(o=>bd(o.id)==d&&o.st!="Cancel"),sum=a=>a.reduce((q,o)=>q+o.tot,0);
+const cash=sum(os.filter(o=>o.paid&&(o.pm=="Cash"||o.pm=="COD"||!o.pm))),dig=sum(os.filter(o=>o.paid&&o.pm&&o.pm!="Cash"&&o.pm!="COD"&&o.pm!="Udhar")),
+udg=sum(os.filter(o=>o.pm=="Udhar"&&!o.paid)),unp=sum(os.filter(o=>!o.paid&&o.pm!="Udhar")),
+was=ud.filter(x=>x.t==d&&x.k=="c").reduce((q,x)=>q+x.a,0),
+ex=exp.filter(x=>x.t==d),exT=ex.reduce((q,x)=>q+x.a,0);
+let open=opn[d],auto=false;if(open==null){const prev=allDays().filter(x=>dk(x)<dk(d)).pop();open=prev?dayStat(prev,memo).close:0;auto=true}
+const dv=os.filter(o=>o.ty=="Delivery"),r={dn:dv.length,ds:sum(dv),df:dv.reduce((q,o)=>q+(+o.fee||0),0),d,n:os.length,sale:sum(os),cash,dig,udg,unp,was,ex,exT,open,auto,close:open+cash+was-exT};memo[d]=r;return r}
+function regH(d,showAll){const r=dayStat(d),cats=[...XC,...[...new Set(r.ex.map(x=>x.d))].filter(c=>!XC.includes(c))],line=(a,b,bold)=>`<tr><td>${a}</td><td align="right">${bold?"<b>"+b+"</b>":b}</td></tr>`;
+return `<div class="pn"><b>📒 Roznamcha — ${d}</b> <span class="tag">${r.n} orders</span>
+<div class="st">Opening (subah dukan ke galle mein jitni raqam thi):</div>
+<input type="number" inputmode="numeric" value="${r.open}" onchange="setOpen('${d}',this.value)">${r.auto?'<div class="st">Pichle din ki closing se khud aayi hai. Badalni ho to likh dein.</div>':""}
+<table style="margin-top:6px">${line("Kul sale",rs(r.sale),1)}${line("&nbsp;&nbsp;Cash sale",rs(r.cash))}${line("&nbsp;&nbsp;JazzCash/Easypaisa/Card",rs(r.dig))}${line("&nbsp;&nbsp;Udhar par diya",rs(r.udg))}${r.unp?line("&nbsp;&nbsp;Abhi payment nahi mili",rs(r.unp)):""}${r.dn?line("🚚 Delivery ("+r.dn+" orders, charges "+rs(r.df)+")",rs(r.ds)):""}${line("Udhar wasooli (cash mila)",rs(r.was))}
+<tr><td colspan="2"><b>Kharcha</b></td></tr>${cats.map(c=>line("&nbsp;&nbsp;"+(XE[c]||"🧾")+" "+esc(c),rs(r.ex.filter(x=>x.d==c).reduce((q,x)=>q+x.a,0)))).join("")}${line("Kul kharcha",rs(r.exT),1)}</table>
+<h2 style="margin:8px 0 2px">Closing: ${rs(r.close)}</h2><div class="st">Closing = Opening ${rs(r.open)} + Cash sale ${rs(r.cash)} + Wasooli ${rs(r.was)} − Kharcha ${rs(r.exT)}</div>
+<div class="st">Net kamai (sale − kharcha): <b>${rs(r.sale-r.exT)}</b></div>${showAll?"":'<div class="row"><button class="g" onclick="view=\'history\';R()">📅 Pichle dinon ka roznamcha</button></div>'}</div>`}
+function histV(){const days=allDays().reverse();return `<h2>📅 Pichla Roznamcha</h2><div class="row"><button class="g" onclick="view='admin';R()">← Dashboard</button></div>${days.map(d=>regH(d,1)).join("")||'<div class="st">Abhi koi record nahi</div>'}`}
+
+
+
+/* ===== v4: owner tabs (har cheez alag folder) ===== */
+let otab="aaj";try{otab=localStorage.getItem("cd_otab")||"aaj"}catch(e){}
+function setTab(t){otab=t;try{localStorage.setItem("cd_otab",t)}catch(e){}R();window.scrollTo(0,0)}
+
+/* ===== v5: delivery hisab, tabs har option ke liye ===== */
+const dvOf=d=>orders.filter(o=>o.ty=="Delivery"&&o.st!="Cancel"&&bd(o.id)==d);
+const dvSum=a=>({n:a.length,s:a.reduce((q,o)=>q+o.tot,0),f:a.reduce((q,o)=>q+(+o.fee||0),0)});
+function deliveryH(){const today=bd(Date.now()),td=dvOf(today),S=dvSum(td),
+paid=td.filter(o=>o.paid).reduce((q,o)=>q+o.tot,0),unpaid=td.filter(o=>!o.paid&&o.pm!="Udhar").reduce((q,o)=>q+o.tot,0),
+ud2=td.filter(o=>o.pm=="Udhar"&&!o.paid).reduce((q,o)=>q+o.tot,0),
+done=td.filter(o=>o.st=="Delivered").length,canc=orders.filter(o=>o.ty=="Delivery"&&o.st=="Cancel"&&bd(o.id)==today).length,
+inR=d=>orders.filter(o=>o.ty=="Delivery"&&o.st!="Cancel"&&Date.now()-o.id<d*864e5),
+days=[...new Set(orders.filter(o=>o.ty=="Delivery"&&o.st!="Cancel").map(o=>bd(o.id)))].sort((a,b)=>dk(a)<dk(b)?1:-1).slice(0,14),
+row=(a,b,c)=>`<tr><td>${a}</td><td align="right">${b}</td><td align="right">${c}</td></tr>`;
+return `<div class="pn"><b>🚚 Aaj ki Delivery — ${today}</b> <span class="tag">${S.n} orders</span>
+<table style="margin-top:6px"><tr><td>Delivery orders ki kul sale</td><td align="right"><b>${rs(S.s)}</b></td></tr>
+<tr><td>&nbsp;&nbsp;Khane ki raqam</td><td align="right">${rs(S.s-S.f)}</td></tr><tr><td>&nbsp;&nbsp;Delivery charges</td><td align="right">${rs(S.f)}</td></tr>
+<tr><td>Payment mil gayi</td><td align="right">${rs(paid)}</td></tr><tr><td>Abhi payment baqi (COD)</td><td align="right">${rs(unpaid)}</td></tr>${ud2?`<tr><td>Udhar par gayi</td><td align="right">${rs(ud2)}</td></tr>`:""}
+<tr><td>Pahunch chuki (Delivered)</td><td align="right">${done} / ${S.n}</td></tr>${canc?`<tr><td>Cancel</td><td align="right">${canc}</td></tr>`:""}</table></div>
+<div class="pn"><b>Aaj ke delivery orders</b>${td.map(o=>`<div class="it"><b>Bill #${o.bn||String(o.id).slice(-5)} • ${rs(o.tot)}</b> <span class="tag">${o.st}</span> <span class="tag">${o.paid?"Paid ✅":"Unpaid ❌"}</span><div class="st">${esc(o.nm||"")} ${esc(o.ph||"")}${o.ad?" • 📍 "+esc(o.ad):""}</div><div class="row"><button class="g" onclick="setSt(${o.id},'Delivered')">Delivered ✅</button><button class="g" onclick="pd(${o.id})">${o.paid?"Paid hata dein":"Paid karein"}</button></div></div>`).join("")||'<div class="st">Aaj koi delivery order nahi</div>'}</div>
+<div class="pn"><b>Delivery ka hisab</b><table style="margin-top:6px"><tr><td></td><td align="right"><b>Orders</b></td><td align="right"><b>Sale / Charges</b></td></tr>
+${[["Pichle 24 ghante",1],["Pichle 7 din",7],["Pichle 30 din",30]].map(([l,d])=>{const q=dvSum(inR(d));return row(l,q.n,rs(q.s)+" / "+rs(q.f))}).join("")}</table></div>
+<div class="pn"><b>Din ke hisab se</b><table style="margin-top:6px">${days.map(d=>{const q=dvSum(dvOf(d));return row(d,q.n+" orders",rs(q.s)+" / "+rs(q.f))}).join("")||'<tr><td>Abhi koi record nahi</td></tr>'}</table></div>`}
+{const _aX=adminX;adminX=function(){const html=_aX();if(!adm)return html;
+const parts=html.split(/<!--T:(\w+)-->/),seg={};for(let i=1;i<parts.length;i+=2){const k=parts[i];(seg[k]=seg[k]||[]).push(parts[i+1])}
+const by={};Object.keys(seg).sort().forEach(k=>{const t=k.replace(/\d+$/,"");by[t]=(by[t]||"")+seg[k].join("")});
+by.delivery=deliveryH();by.deals=dealsH();
+const today=bd(Date.now()),n=orders.filter(o=>bd(o.id)==today&&o.st!="Cancel").length,dn=dvOf(today).length;
+if(!by[otab])otab="aaj";return by[otab]||""}}
+
+
+/* ===== v6: upar ka panel — Sale / Kharcha / Total udhar (har page par, sirf owner login par) ===== */
+function go(t){view="admin";setTab(t)}
+(function(){const d=document.createElement("div");d.id="topdock";d.style.display="none";d.innerHTML='<div id="tabbar"></div><div id="sumbar"></div>';document.body.insertBefore(d,document.body.firstChild)})();
+function sumUpdate(){return;const d=document.getElementById("topdock"),s=document.getElementById("sumbar"),tb=document.getElementById("tabbar");if(!d)return;
+if(!adm){d.style.display="none";document.documentElement.style.setProperty("--sbh","0px");return}
+d.style.display="block";
+const t=bd(Date.now()),os=orders.filter(o=>bd(o.id)==t&&o.st!="Cancel"),sale=os.reduce((q,o)=>q+o.tot,0),ex=exp.filter(x=>x.t==t).reduce((q,x)=>q+x.a,0),u=udTotal(),
+n=v=>Math.round(v).toLocaleString("en-PK"),
+c=(k,cl,lb,v,sub)=>`<div class="sc ${cl}" role="button" tabindex="0" onclick="go('${k}')" onkeydown="if(event.key=='Enter')go('${k}')"><span class="sl">${lb}</span><span class="sv"><i>Rs</i>${n(v)}</span><span class="ss">${sub}</span></div>`;
+const sl=tb.scrollLeft;
+tb.innerHTML=OT().map(([k,e,l])=>`<button class="${view=="admin"&&k==otab?"on":""}" onclick="go('${k}')"><span>${e}</span>${l}</button>`).join("");
+const a=tb.querySelector(".on");tb.scrollLeft=sl;if(a&&(a.offsetLeft<sl||a.offsetLeft+a.offsetWidth>sl+tb.clientWidth))tb.scrollLeft=a.offsetLeft-(tb.clientWidth-a.offsetWidth)/2;
+s.innerHTML=`<div class="lcd">${c("aaj","s1","Sale",sale,os.length+" orders aaj")}${c("kharcha","s2","Kharcha",ex,"aaj ka")}${c("udhar","s3","Total udhar",u,"kul baqaya")}</div>`;
+document.documentElement.style.setProperty("--sbh",d.offsetHeight+"px")}
+{const _R6=R;R=function(){_R6();sumUpdate()}}
+addEventListener("resize",sumUpdate);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(sumUpdate);
+
+/* ===== v7: owner tab list, orders filter ===== */
+function OT(){const today=bd(Date.now()),n=orders.filter(o=>bd(o.id)==today&&o.st!="Cancel").length,dn=dvOf(today).length,dl=deals.length;
+return [["aaj","🏠","Aaj"],["delivery","🚚","Delivery"+(dn?" ("+dn+")":"")],["orders","🧾","Orders"+(n?" ("+n+")":"")],["deals","🎁","Deals"+(dl?" ("+dl+")":"")],["kharcha","💸","Kharcha"],["udhar","📒","Udhar"],["zakat","🕌","Zakat"],["report","📈","Report"],["menu","🍽️","Menu & Rates"],["setting","⚙️","Settings"],["data","💾","Data & PIN"]]}
+let ofl="Sab";
+const ordPass=o=>ofl=="Sab"||(ofl=="Unpaid"?(!o.paid&&o.st!="Cancel"):o.st==ofl);
+function ordFilterH(){return `<div class="row" style="margin:0 0 8px">${["Sab","Naya","Tayyar","Delivered","Unpaid","Cancel"].map(s=>`<button class="${s==ofl?"":"g"}" style="padding:6px 12px;font-size:13px" onclick="ofl='${s}';R()">${s}</button>`).join("")}</div>`}
+R();
+</script><script id="sav-js">
+(function(){
+let sav=ld("cd_sav",[]);const G={a:"",n:""};window._G=G;
+const kOf=x=>x.k||"sv",sum=(a,f)=>a.reduce((q,x)=>q+f(x),0),SG={in:1,sw:1,out:-1,sv:-1};
+const LBL={in:"➕ Galle mein daale",out:"➖ Galle se nikale",sv:"💰 Saving mein gaye",sw:"↩️ Saving se galle mein aaye"};
+const svTot=()=>sum(sav,x=>kOf(x)=="sv"?x.a:kOf(x)=="sw"?-x.a:0),gadj=d=>sum(sav.filter(x=>x.t==d),x=>SG[kOf(x)]*x.a),sOf=d=>sum(sav.filter(x=>x.t==d&&kOf(x)=="sv"),x=>x.a);
+const _ds=dayStat;
+dayStat=function(d,memo){const r=_ds(d,memo);if(r.sv===undefined){r.sv=sOf(d);r.ga=gadj(d);r.close=r.close+r.ga}return r};
+window.addG=function(d,k,pp,a,n){const g=i=>(document.getElementById(i)||{}).value;a=+(a||G.a||g("sva"));n=n!==undefined?n:(G.n||g("svn")||"").trim();if(!a||a<=0){alert("Pehle raqam likhein");return}
+const r=dayStat(d);if((k=="out"||k=="sv")&&a>r.close&&!confirm("Galle mein abhi sirf "+rs(r.close)+" hain. Phir bhi likh dein?"))return;
+if(k=="sw"&&a>svTot()){alert("Saving mein sirf "+rs(svTot())+" jama hain");return}
+sav.unshift({id:Date.now(),t:d,a,n,k});sv("cd_sav",sav);G.a="";G.n="";R();if(pp)window.prReg(d)};
+window.addSav=(d,pp,a,n)=>window.addG(d,"sv",pp,a,n);
+window.delSav=function(id){if(!confirm("Ye entry hata dein?"))return;sav=sav.filter(x=>x.id!=id);sv("cd_sav",sav);R()};
+window.prReg=function(d){const r=dayStat(d),es=sav.filter(x=>x.t==d),tk=k=>sum(es.filter(x=>kOf(x)==k),x=>x.a),L=(a,b,bo)=>`<tr><td>${a}</td><td style="text-align:right">${bo?"<b>"+b+"</b>":b}</td></tr>`,cats=[...new Set(r.ex.map(x=>x.d))],rc=document.getElementById("rc");
+rc.style.width=(st.pw||72)+"mm";
+rc.innerHTML=`<div style="text-align:center"><b style="font-size:18px">CHEF DAD</b><br>Roznamcha • ${d}</div><hr><table>${L("Opening (galla)",rs(r.open))}${L("Kul sale ("+r.n+" orders)",rs(r.sale),1)}${L("&nbsp;&nbsp;Cash sale",rs(r.cash))}${L("&nbsp;&nbsp;JazzCash/EP/Card",rs(r.dig))}${L("&nbsp;&nbsp;Udhar par",rs(r.udg))}${L("Udhar wasooli",rs(r.was))}</table><hr><table>${cats.map(c=>L(esc(c),rs(r.ex.filter(x=>x.d==c).reduce((q,x)=>q+x.a,0)))).join("")}${L("Kul kharcha",rs(r.exT),1)}</table><hr><table>${L("Net kamai",rs(r.sale-r.exT),1)}${L("Galle mein daale",rs(tk("in")))}${L("Galle se nikale",rs(tk("out")))}${L("Saving mein gaye",rs(tk("sv")))}${L("Saving se wapas",rs(tk("sw")))}${L("Kul Saving jama",rs(svTot()),1)}</table><hr><div style="text-align:center">Galle mein baqi<br><b style="font-size:22px">${rs(r.close)}</b></div>`;
+window.print()};
+window.chefSav={add:(d,a,n)=>window.addG(d,"sv",0,a,n),of:sOf,tot:svTot};
+const _rg=regH;
+regH=function(d,all){let h=_rg(d,all);const r=dayStat(d),es=sav.filter(x=>x.t==d);
+const blk=`<div class="pn" style="margin:8px 0"><b>💰 Galla aur Saving</b><div class="row" style="margin:6px 0"><div class="pn" style="flex:1;margin:0"><div class="st">Galle mein baqi</div><b style="font-size:22px">${rs(r.close)}</b></div><div class="pn" style="flex:1;margin:0"><div class="st">Kul Saving jama (ab tak)</div><b style="font-size:22px">${rs(svTot())}</b></div></div>${all?"":`<div class="row"><input id="sva" type="number" inputmode="numeric" placeholder="Raqam" value="${esc(G.a)}" oninput="window._G.a=this.value" style="flex:1"><input id="svn" placeholder="Note (optional)" value="${esc(G.n)}" oninput="window._G.n=this.value" style="flex:1"></div><div class="row"><button onclick="addG('${d}','in')">➕ Galle mein daalein</button><button class="g" onclick="addG('${d}','out')">➖ Galle se nikalein</button></div><div class="row"><button onclick="addG('${d}','sv')">💰 Saving mein daalein</button><button class="g" onclick="addG('${d}','sw')">↩️ Saving se galle mein</button></div>`}${es.map(x=>`<div class="st">${LBL[kOf(x)]} • ${x.n?esc(x.n)+" • ":""}<b>${rs(x.a)}</b> <button class="g" onclick="delSav(${x.id})">🗑️</button></div>`).join("")}<div class="st">Saving alag jama hoti hai aur agle dinon mein bhi nazar aati hai. Galle ki har entry upar list mein likhi hoti hai.</div></div>`;
+h=h.replace('<h2 style="margin:8px 0 2px">Closing: ',blk+'<h2 style="margin:8px 0 2px">Galle mein baqi: ').replace(/Closing = (Opening[^<]*)/,"Baqi = $1 "+(r.ga<0?"−":"+")+" Galla/Saving entries "+rs(Math.abs(r.ga)));
+return h.replace(/<\/div>$/,`<div class="row"><button onclick="prReg('${d}')">🖨️ Roznamcha print</button></div></div>`)};
+/* ===== manual roznamcha: sirf wahi jo owner ne likha ===== */
+{const _ds2=dayStat;dayStat=function(d,memo){const r=_ds2(d,memo);r.close=r.open+r.ga+r.was-r.exT;return r}}
+const rzItems=d=>[...sav.filter(x=>x.t==d).map(x=>({id:x.id,s:SG[kOf(x)],a:x.a,n:x.n,l:LBL[kOf(x)],del:"delSav("+x.id+")"})),...exp.filter(x=>x.t==d).map(x=>({id:x.id,s:-1,a:x.a,n:x.n,l:"💸 Kharcha • "+(x.d||"")})),...ud.filter(x=>x.t==d&&x.k=="c").map(x=>({id:x.id,s:1,a:x.a,n:x.nm,l:"📒 Udhar wasooli"}))].sort((a,b)=>a.id-b.id);
+const hm=id=>new Date(id).toLocaleTimeString("en-US",{hour:"2-digit",minute:"2-digit"});
+regH=function(d,all){const r=dayStat(d),it=rzItems(d),inn=sum(it.filter(x=>x.s>0),x=>x.a),out=sum(it.filter(x=>x.s<0),x=>x.a);
+return `<div class="pn"><b>📒 Roznamcha — ${d}</b> <span class="tag">${it.length} entries</span>
+<div class="st">Opening (subah galle mein jitni raqam thi):</div><input type="number" inputmode="numeric" value="${r.open}" onchange="setOpen('${d}',this.value)">${r.auto?'<div class="st">Pichle din ke baqi se khud aayi hai. Badalni ho to likh dein.</div>':""}
+${all?"":`<div class="row"><input id="sva" type="number" inputmode="numeric" placeholder="Raqam" value="${esc(G.a)}" oninput="window._G.a=this.value" style="flex:1"><input id="svn" placeholder="Kis liye likha (note)" value="${esc(G.n)}" oninput="window._G.n=this.value" style="flex:1"></div><div class="row"><button onclick="addG('${d}','in')">➕ Galle mein aaye</button><button class="g" onclick="addG('${d}','out')">➖ Galle se gaye</button></div><div class="row"><button class="g" onclick="addG('${d}','sv')">💰 Saving mein</button><button class="g" onclick="addG('${d}','sw')">↩️ Saving se wapas</button></div><div class="st">Kharcha aur Udhar wasooli apne folder se likhein, wo bhi yahin nazar aayenge.</div>`}
+<table style="margin-top:6px"><tr><td>Opening</td><td align="right">${rs(r.open)}</td></tr>${it.map(x=>`<tr><td>${hm(x.id)} • ${x.l}${x.n?" • "+esc(x.n):""} ${x.del&&!all?`<button class="g" style="padding:2px 8px" onclick="${x.del}">🗑️</button>`:""}</td><td align="right">${x.s>0?"+":"−"} ${rs(x.a)}</td></tr>`).join("")||'<tr><td colspan="2" class="st">Abhi koi entry nahi likhi</td></tr>'}</table>
+<h2 style="margin:8px 0 2px">Galle mein baqi: ${rs(r.close)}</h2><div class="st">Opening ${rs(r.open)} + aaye ${rs(inn)} − gaye ${rs(out)}</div><div class="st">Kul Saving jama: <b>${rs(svTot())}</b></div>
+${all?"":'<div class="row"><button class="g" onclick="view=\'history\';R()">📅 Pichla roznamcha</button></div>'}<div class="row"><button onclick="prReg('${d}')">🖨️ Roznamcha print</button></div></div>`};
+window.prReg=function(d){const r=dayStat(d),it=rzItems(d),rc=document.getElementById("rc");rc.style.width=(st.pw||72)+"mm";
+rc.innerHTML=`<div style="text-align:center"><b style="font-size:18px">CHEF DAD</b><br>Roznamcha • ${d}</div><hr><table><tr><td>Opening</td><td style="text-align:right">${rs(r.open)}</td></tr>${it.map(x=>`<tr><td>${hm(x.id)} ${x.l}${x.n?" • "+esc(x.n):""}</td><td style="text-align:right">${x.s>0?"+":"−"}${rs(x.a)}</td></tr>`).join("")}</table><hr><div style="text-align:center">Galle mein baqi<br><b style="font-size:22px">${rs(r.close)}</b></div><div style="text-align:center">Kul Saving jama: ${rs(svTot())}</div>`;window.print()};
+const _R=R;R=function(){const a=document.activeElement,id=a&&a.id,p=a&&a.selectionStart;_R();if(id=="sva"||id=="svn"){const e=document.getElementById(id);if(e){e.focus();try{e.setSelectionRange(p,p)}catch(x){}}}};
+R();
+})();
+</script>
+
+<script id="off-js">
+(function(){
+const Q="cd_outbox",gq=()=>ld(Q,[]),pq=a=>sv(Q,a);
+const post=o=>fetch(API,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain"},body:JSON.stringify(o)});
+function queue(o){const a=gq();if(!a.some(x=>x.id==o.id)){a.push(o);pq(a)}chip()}
+sendOrder=function(o){if(!okApi())return;if(!navigator.onLine){queue(o);return}try{post(o).catch(()=>queue(o))}catch(e){queue(o)}};
+async function flush(){if(!navigator.onLine||!okApi())return;const a=gq();if(!a.length)return;const left=[];for(const o of a){try{await post(o)}catch(e){left.push(o)}}pq(left);chip()}
+const c=document.createElement("div");c.id="offchip";c.style.cssText="position:fixed;left:10px;bottom:calc(122px + env(safe-area-inset-bottom,0px));z-index:59;padding:4px 10px;border-radius:999px;font:700 12px Nunito,system-ui,sans-serif;background:#0b3d91;color:#fff;border:1px solid #9cc4ff;display:none";document.body.appendChild(c);
+function chip(){const n=gq().length,off=!navigator.onLine;c.style.display=off||n?"":"none";c.textContent=(off?"📴 Offline • kaam chal raha hai":"")+(n?(off?" • ":"")+"⏳ "+n+" order bhejne baqi":"")}
+addEventListener("online",()=>{chip();flush()});addEventListener("offline",chip);setInterval(flush,30000);chip();flush();
+if("serviceWorker" in navigator&&/^https?:$/.test(location.protocol))navigator.serviceWorker.register("sw.js").catch(()=>{});
+})();
+</script>
+
+
+
+<style id="theme-orange">
+/* ===== Orange & White theme ===== */
+:root{--bg:#fff8f1;--card:#fff;--tx:#2a1a0e;--mu:#8a6a4f;--ac:#f97316;--gold:#ea580c;--bd:#fde0c4;--glow:transparent;--glow2:transparent;color-scheme:light}
+:root[data-theme=dark]{--bg:#1a1108;--card:#261a0e;--tx:#fff3e6;--mu:#d6b48f;--ac:#fb923c;--gold:#fb923c;--bd:#4a3219;color-scheme:dark}
+[data-theme=dark] input,[data-theme=dark] select,[data-theme=dark] textarea{background:#2e2010}
+.it,.pn{border-radius:16px!important}
+.hero{background:linear-gradient(135deg,#ea580c,#fb923c);box-shadow:0 8px 24px -12px rgba(234,88,12,.6)}
+.hero::after{background:linear-gradient(90deg,#fff,#ffd8b0,#fff);height:4px}
+.hero h1{color:#fff;text-shadow:none}.hero small{color:#fff1e2}.hero button.g{color:#fff;border:1px solid rgba(255,255,255,.8);background:transparent}
+button{background:linear-gradient(180deg,#fb923c,#f97316);color:#fff;box-shadow:0 2px 0 #c2410c,0 8px 16px -8px rgba(249,115,22,.55)}
+button:active{box-shadow:0 0 0 #c2410c,0 3px 8px -5px rgba(249,115,22,.5)}
+button.g,.sz button{color:var(--gold);border-color:var(--ac);background:transparent;box-shadow:none}
+[data-theme=dark] button.g,[data-theme=dark] .sz button{color:#fff3e6;border-color:#fb923c}
+.sz button:active,.sz button:active b,.sz button:active small{background:var(--ac);color:#fff}
+main>h2::after{background:linear-gradient(90deg,#f97316,#fdba74)}
+.hot{background:linear-gradient(90deg,#ea580c,#fb923c)}
+.img,[data-theme=dark] .img{background:radial-gradient(circle at 30% 20%,#fdba74,#f97316)}
+.card{box-shadow:0 8px 20px -12px rgba(249,115,22,.4)}.it,.pn{box-shadow:0 2px 10px -6px rgba(249,115,22,.35)!important}
+.tag{background:rgba(249,115,22,.16);color:var(--tx)}
+input:focus,select:focus,textarea:focus{border-color:var(--ac);box-shadow:0 0 0 3px rgba(249,115,22,.22)}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #fb923c}
+.deal,#bar{background:linear-gradient(90deg,#ea580c,#f97316);color:#fff;border:1px solid #ffd8b0}
+#bar button{background:#fff;color:#c2410c;box-shadow:none}
+.sz button b{color:var(--ac)}
+
+/* app-style owner home */
+.apps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px 10px;margin:14px 0}
+@media(min-width:600px){.apps{grid-template-columns:repeat(4,1fr)}}
+.apps .app{display:flex;flex-direction:column;align-items:center;gap:8px;background:transparent;box-shadow:none;color:var(--tx);padding:4px 0;font-weight:800;font-size:13px;position:relative;border-radius:16px}
+.apps .app:active{transform:scale(.94)}
+.apic{width:64px;height:64px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:32px;background:linear-gradient(160deg,#fff,#ffe6cf);border:2px solid var(--ac);box-shadow:0 8px 16px -8px rgba(249,115,22,.55)}
+.apps .app.hl .apic{background:linear-gradient(160deg,#fb923c,#ea580c)}
+.apb{position:absolute;top:-4px;right:calc(50% - 44px);background:#dc2626;color:#fff;border-radius:99px;font:800 12px/1 Nunito,sans-serif;padding:4px 7px;min-width:22px;text-align:center}
+.bkrow{display:flex;align-items:center;gap:10px;margin:10px 0 4px}.bkrow b{font-size:19px}
+
+/* pending cards */
+.pcd{border-left:6px solid var(--ac)}
+.pt1{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.pty{background:#000;color:#fff;font-weight:900;font-size:20px;padding:4px 12px;border-radius:10px;text-transform:uppercase}
+.pno{font-weight:900;font-size:24px}
+.cdn{margin-left:auto;font:800 22px ui-monospace,Menlo,Consolas,monospace;color:#15803d}
+.cdn.late{color:#dc2626;animation:bl 1s infinite}
+@keyframes bl{50%{opacity:.35}}
+@media(prefers-reduced-motion:reduce){.cdn.late{animation:none}}
+#pal{position:fixed;left:8px;right:8px;top:calc(8px + env(safe-area-inset-top,0px));z-index:200;max-width:560px;margin:0 auto;background:#dc2626;color:#fff;border-radius:16px;padding:12px 14px;box-shadow:0 12px 30px rgba(0,0,0,.45);display:none}
+#pal b{font-size:18px}#pal .row button{background:#fff;color:#b91c1c;box-shadow:none}
+
+/* side stats (owner only) */
+#sdw{position:fixed;right:6px;top:calc(110px + env(safe-area-inset-top,0px));z-index:40;width:96px;padding:6px 8px;border-radius:12px;background:var(--card);border:1.5px solid var(--ac);box-shadow:0 4px 14px -6px rgba(249,115,22,.6);display:none;cursor:pointer;font-family:Nunito,system-ui,sans-serif;color:var(--tx)}
+#sdw .sr{display:flex;flex-direction:column;line-height:1.15;margin:2px 0}#sdw small{font-size:10px;font-weight:800;color:var(--mu)}#sdw b{font:800 12px ui-monospace,Menlo,Consolas,monospace}
+#sdw .sh{font-size:10px;text-align:right;color:var(--mu)}
+
+/* floating calculator */
+#cfab{position:fixed;right:14px;bottom:calc(142px + env(safe-area-inset-bottom,0px));z-index:80;width:56px;height:56px;border-radius:50%;padding:0;font-size:26px;display:none}
+#cp{position:fixed;z-index:81;right:10px;left:10px;bottom:calc(10px + env(safe-area-inset-bottom,0px));max-width:340px;margin:0 0 0 auto;padding:12px;border-radius:22px;background:var(--card);color:var(--tx);border:2px solid var(--ac);box-shadow:0 18px 44px rgba(0,0,0,.4)}
+#cp[hidden]{display:none}
+#cp .ch{display:flex;justify-content:space-between;align-items:center;font-weight:800;margin-bottom:6px}
+#cd{font:800 28px ui-monospace,Menlo,Consolas,monospace;text-align:right;min-height:46px;padding:6px 10px;border:1.5px solid var(--bd);border-radius:12px;overflow-x:auto;white-space:nowrap;background:var(--bg)}
+#cp .kg{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:8px}
+#cp .kg button{padding:13px 0;font-size:19px}
+@media print{#cfab,#cp,#sdw,#pal{display:none!important}}
+</style>
+<button id="cfab" aria-label="Calculator">🧮</button>
+<div id="cp" hidden role="dialog" aria-label="Calculator">
+<div class="ch"><span>🧮 Calculator</span><button class="g" id="cx" aria-label="Band karein" style="padding:4px 12px">✕</button></div>
+<div id="cd">0</div>
+<div class="kg" id="ck"></div>
+<div class="st" style="margin-top:8px">Customer ne diye → wapsi:</div>
+<div class="row"><input id="cpd" type="number" inputmode="numeric" placeholder="Customer ne kitne diye" style="flex:1;margin:0"><b id="cpb"></b></div>
+</div>
+<div id="sdw" role="button" aria-label="Sale, kharcha, udhar"></div>
+<div id="pal"></div>
+<script id="owner-js">
+(function(){
+const $=i=>document.getElementById(i),LIM=()=>(+st.tm||30)*6e4,done=o=>o.st=="Delivered"||o.st=="Cancel";
+/* ---- slip header ---- */
+window.slipHead=function(o){const d=new Date(o.id),day=d.toLocaleDateString("en-GB",{weekday:"long"}),dt=d.toLocaleDateString("en-GB"),tm=d.toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit"});
+return `<div style="border:3px solid #000;text-align:center;padding:4px 2px;margin:2px 0"><div style="font-size:28px;font-weight:900;line-height:1.1;text-transform:uppercase">${esc(o.ty||"")}</div></div><div style="text-align:center;font-size:24px;font-weight:900;line-height:1.2">${tm}</div><div style="text-align:center;font-size:16px;font-weight:800">${day} • ${dt}</div><div style="border:3px solid #000;text-align:center;padding:3px 2px;margin:4px 0"><div style="font-size:13px;font-weight:800">READY TIME / TAYYAR HONE KA WAQT</div><div style="font-size:30px;font-weight:900;line-height:1.1">${new Date((o.pt||Date.now())+LIM()).toLocaleTimeString("en-US",{hour:"2-digit",minute:"2-digit"})}</div></div><div style="text-align:center;font-size:18px">Bill No: <b style="font-size:26px">${o.bn||String(o.id).slice(-5)}</b></div>`};
+/* ---- timer starts when slip prints ---- */
+function stT(id){const o=orders.find(x=>x.id==id);if(o&&!o.pt&&!done(o)){o.pt=Date.now();sv("cd_orders",orders)}}
+{const _p=pr;pr=function(id){stT(id);return _p(id)}}
+{const _k=kot;kot=function(id){stT(id);return _k(id)}}
+/* ---- pending ---- */
+const pend=()=>{const n=Date.now();return orders.filter(o=>!done(o)&&n-o.id<864e5).sort((a,b)=>(a.pt||a.id)-(b.pt||b.id))};
+const mmss=ms=>{ms=Math.abs(ms);const m=Math.floor(ms/6e4),s=Math.floor(ms/1e3)%60;return String(m).padStart(2,"0")+":"+String(s).padStart(2,"0")};
+const cdTxt=o=>{if(!o.pt)return "Slip nahi nikli";const r=o.pt+LIM()-Date.now();return r>=0?"⏱ "+mmss(r):"⏰ +"+mmss(r)+" late"};
+const num=o=>o.bn||String(o.id).slice(-5);
+window.pendH=function(cp){const L=pend();
+if(cp&&!L.length)return "";
+return (cp?`<div class="pn" style="border-color:var(--ac)"><b>⏳ Pending orders (${L.length})</b></div>`:`<div class="pn"><b>⏳ Pending orders (${L.length})</b><div class="st">Slip print hote hi ${+st.tm||30} minute ka timer chalta hai. Complete karne par order yahan se hat jata hai; waqt poora hone par beep bajta hai aur order number bola jata hai.</div></div>`)+(L.map(o=>`<div class="pn pcd"><div class="pt1"><span class="pty">${esc(o.ty||"")}</span><span class="pno">#${num(o)}</span><span class="cdn" data-id="${o.id}">${cdTxt(o)}</span></div><div class="st">${new Date(o.id).toLocaleDateString("en-GB",{weekday:"long"})} • ${new Date(o.id).toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit"})} • ${rs(o.tot)} ${o.nm?"• "+esc(o.nm):""}</div><div>${o.items.map(c=>c.q+"× "+esc(c.n)+(c.s=="-"?"":" ("+c.s+")")).join(", ")}</div>${o.nt?`<div class="st">📝 ${esc(o.nt)}</div>`:""}<div class="row"><button onclick="setSt(${o.id},'Delivered')">Complete ✅</button><button class="g" onclick="setSt(${o.id},'Tayyar')">Tayyar</button><button class="g" onclick="pr(${o.id})">🖨️ Print</button><button class="g" onclick="setSt(${o.id},'Cancel')">Cancel</button></div></div>`).join("")||'<div class="st">Koi pending order nahi 🎉</div>')};
+const OT0=OT;
+OT=function(){const a=OT0(),p=pend().length;return [["pending","⏳","Pending"+(p?" ("+p+")":"")],...a]};
+/* ---- app-style home ---- */
+window.homeH=function(){return `<div class="bkrow"><h2 style="margin:0">Chef Dad • Owner</h2></div><div class="row"><button class="g" onclick="V('menu')">🍽️ Menu</button><button class="g" onclick="view='cart';R()">🛒 Counter order</button><button class="g" onclick="adm=false;sv('cd_adm',false);V('menu')">Logout</button></div><div class="apps">${OT().map(([k,e,l])=>{const m=l.match(/^(.*?) \((\d+)\)$/),nm=m?m[1]:l,c=m?m[2]:"";return `<button class="app ${k=="pending"&&c?"hl":""}" onclick="go('${k}')"><span class="apic">${e}</span>${nm}${c?`<span class="apb">${c}</span>`:""}</button>`}).join("")}</div>`};
+{const _c=cartV;cartV=function(){return (adm?pendH(1):"")+_c()}}
+{const _a=adminX;adminX=function(){if(!adm)return _a();if(otab==="home")return homeH();
+const lb=(OT().find(x=>x[0]==otab)||["","",""]),back=`<div class="bkrow"><button class="g" onclick="go('home')">← Home</button><b>${lb[1]} ${lb[2].replace(/ \(\d+\)$/,"")}</b></div>`;
+if(otab==="pending")return back+pendH();
+let h=_a();if(otab=="setting")h+=`<div class="pn"><b>⏱️ Pending timer</b><div class="st">Slip print hone ke baad kitne minute mein order complete hona chahiye</div><input type="number" value="${+st.tm||30}" onchange="st.tm=+this.value||30;sv('cd_st',st)"></div>`;return back+h}}
+/* ---- alarm ---- */
+let lastB=0,lastK="";
+function beep3(){try{const a=new(window.AudioContext||window.webkitAudioContext)();[0,.35,.7].forEach(t=>{const o=a.createOscillator(),g=a.createGain();o.connect(g);g.connect(a.destination);o.frequency.value=988;g.gain.value=.25;o.start(a.currentTime+t);o.stop(a.currentTime+t+.22)});setTimeout(()=>a.close(),1500)}catch(e){}}
+function speak(L){try{if(!window.speechSynthesis)return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(L.map(o=>"Order number "+num(o)+", "+(o.ty||"")).join(". ")+" pending hai");u.lang="en-IN";speechSynthesis.speak(u)}catch(e){}}
+window.PA={ack(){const n=Date.now();orders.forEach(o=>{if(o.pt&&!done(o)&&n>=o.pt+LIM())o.ak=1});sv("cd_orders",orders);lastK="";tick()},
+  done(id){const o=orders.find(x=>x.id==id);if(o)o.ak=1;setSt(id,"Delivered");lastK="";tick()}};
+function tick(){const n=Date.now();document.querySelectorAll(".cdn").forEach(e=>{const o=orders.find(x=>x.id==e.dataset.id);if(!o)return;e.textContent=cdTxt(o);e.classList.toggle("late",!!o.pt&&n>o.pt+LIM())});
+const p=$("pal");if(!adm){p.style.display="none";return}
+const od=orders.filter(o=>o.pt&&!done(o)&&!o.ak&&n>=o.pt+LIM()),fr=od.filter(o=>!o.al);
+if(fr.length){fr.forEach(o=>o.al=1);sv("cd_orders",orders);lastB=n;beep3();speak(fr)}else if(od.length&&n-lastB>30000){lastB=n;beep3()}
+const k=od.map(o=>o.id).join();if(k!=lastK){lastK=k;if(!od.length)p.style.display="none";else{p.style.display="block";p.innerHTML=`<b>⏰ ${od.length} order ka ${+st.tm||30} minute poora!</b>`+od.map(o=>`<div class="row" style="justify-content:space-between;margin:6px 0"><span style="font-size:17px"><b>#${num(o)}</b> • ${esc(o.ty||"")} • ${rs(o.tot)}</span><button onclick="PA.done(${o.id})">Complete ✅</button></div>`).join("")+`<div class="row"><button onclick="PA.ack()">Theek hai (band karein)</button></div>`}}
+if(n%10<1)side()}
+setInterval(tick,1000);
+/* ---- side stats (owner only, tap to reveal) ---- */
+let rv=0,rt;
+function side(){const w=$("sdw");if(!w)return;if(!adm){w.style.display="none";return}w.style.display="block";
+const t=bd(Date.now()),os=orders.filter(o=>bd(o.id)==t&&o.st!="Cancel"),sale=os.reduce((q,o)=>q+o.tot,0),ex=exp.filter(x=>x.t==t).reduce((q,x)=>q+x.a,0),u=udTotal(),f=v=>rv?"Rs "+Math.round(v).toLocaleString("en-PK"):"Rs ••••";
+w.innerHTML=`<div class="sr"><small>Sale</small><b>${f(sale)}</b></div><div class="sr"><small>Kharcha</small><b>${f(ex)}</b></div><div class="sr"><small>Udhar</small><b>${f(u)}</b></div><div class="sh">${rv?"🙈 chhupayen":"👁 dekhein"}</div>`}
+$("sdw").onclick=()=>{rv=!rv;clearTimeout(rt);if(rv)rt=setTimeout(()=>{rv=0;side()},10000);side()};
+/* ---- calculator ---- */
+let kx="";
+const KS=[["C","C"],["⌫","B"],["÷","/"],["×","*"],["7"],["8"],["9"],["−","-"],["4"],["5"],["6"],["+","+"],["1"],["2"],["3"],["=","="],["0"],["00"],["."],["Cart","T"]];
+$("ck").innerHTML=KS.map(k=>`<button class="${/^[0-9.]/.test(k[0])?"g":""}" data-k="${k[1]||k[0]}">${k[0]}</button>`).join("");
+const shw=()=>{$("cd").textContent=kx.replace(/\*/g,"×").replace(/\//g,"÷").replace(/-/g,"−")||"0";cb()};
+function cb(){const g=+$("cpd").value;let bill=NaN;if(kx&&/^[0-9.]+$/.test(kx))bill=+kx;else if(!kx)bill=cnt()?total()+fee()-dsc():NaN;$("cpb").textContent=g&&isFinite(bill)?(g>=bill?"Wapsi: "+rs(g-bill):"Kam: "+rs(bill-g)):""}
+function press(k){if(k=="C")kx="";else if(k=="B")kx=kx.slice(0,-1);else if(k=="T")kx+=String(total()+fee()-dsc());else if(k=="="){try{if(/^[0-9+\-*\/.() ]+$/.test(kx)&&kx){const r=Function('"use strict";return ('+kx+')')();if(isFinite(r))kx=String(Math.round(r*100)/100)}}catch(e){}}else kx+=k;shw()}
+$("ck").onclick=e=>{const b=e.target.closest("button");if(b)press(b.dataset.k)};
+$("cpd").oninput=cb;
+const cv=v=>{$("cp").hidden=!v;$("cfab").style.display=v||!adm?"none":"block";if(v)shw()};
+$("cfab").onclick=()=>cv(true);$("cx").onclick=()=>cv(false);
+document.addEventListener("keydown",e=>{if($("cp").hidden||/INPUT|TEXTAREA|SELECT/.test((document.activeElement||{}).tagName))return;const k=e.key;if(/^[0-9.]$/.test(k)||/^[+\-*\/]$/.test(k)){press(k)}else if(k=="Enter"||k=="="){e.preventDefault();press("=")}else if(k=="Backspace")press("B");else if(k=="Escape")cv(false)});
+/* ---- hooks ---- */
+const _R=R;R=function(){_R();side();if($("cp").hidden)$("cfab").style.display=adm?"block":"none";else if(!adm)cv(false)};
+otab="home";
+R();
+})();
+</script>
+</body></html>
